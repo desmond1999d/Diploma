@@ -40,7 +40,7 @@ export class UserService {
   }
 
   getSubscriptionsQuantity(id: number) {
-    return this.http.get<number>('/api/ua/subscription-unit/quantity?id=' + id);
+    return this.http.get<number>('/api/ua/productOffering-unit/quantity?id=' + id);
   }
 
 }

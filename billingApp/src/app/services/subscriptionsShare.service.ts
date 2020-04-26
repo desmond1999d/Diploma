@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {HttpService} from './http.service';
 import {map} from 'rxjs/operators';
-import {Subscription} from "../shared/Subscription";
+import {ProductOffering} from "../shared/ProductOffering";
 
 const INIT_DATA = [];
 
@@ -17,7 +17,7 @@ export class SubscriptionsShareService {
     return this.subscriptions.getValue();
   }
 
-  setSubscriptions(subscriptions: Subscription[]) {
+  setSubscriptions(subscriptions: ProductOffering[]) {
     this.subscriptions.next(subscriptions);
   }
 }

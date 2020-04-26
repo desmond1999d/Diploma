@@ -1,7 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {UserIDService} from '../../../../services/userID.service';
 import {SubscriptionService} from "../../../../services/subscription/subscription.service";
-import {Subscription} from "../../../../shared/Subscription";
+import {ProductOffering} from "../../../../shared/ProductOffering";
 import {SubscriptionsShareService} from "../../../../services/subscriptionsShare.service";
 import {UserService} from "../../../../services/user/user.service";
 import {el} from "@angular/platform-browser/testing/src/browser_util";
@@ -17,8 +17,8 @@ export class HeaderComponent implements OnInit {
 
   loggedUserIDObs = this.userIDService.data$;
   loggedUserID;
-  subscriptions: Subscription[];
-  subscription: Subscription;
+  subscriptions: ProductOffering[];
+  subscription: ProductOffering;
   isAdmin: boolean = false;
 
   constructor(private http: SubscriptionService, public userIDService: UserIDService,
@@ -53,14 +53,14 @@ export class HeaderComponent implements OnInit {
     )
   }
 
-  search(name: string): Subscription {
+  search(name: string): ProductOffering {
     this.http.getSubscriptionByName(name).subscribe(subscription => {
       this.subscriptionShareService.setSubscriptions([subscription]);
     });
     return this.subscription;
   }
 
-  filter(category: string): Subscription[] {
+  filter(category: string): ProductOffering[] {
     this.http.getSubscriptionByCategory(category).subscribe(subscriptions => {
       this.subscriptionShareService.setSubscriptions(subscriptions);
     });

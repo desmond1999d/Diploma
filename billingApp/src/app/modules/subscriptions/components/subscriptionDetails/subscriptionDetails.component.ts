@@ -2,10 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {SubscriptionService} from "../../../../services/subscription/subscription.service";
 import {toNumber} from "ngx-bootstrap/timepicker/timepicker.utils";
-import {Subscription} from "../../../../shared/Subscription";
+import {ProductOffering} from "../../../../shared/ProductOffering";
 import {UserIDService} from "../../../../services/userID.service";
 import {SubscriptionUnitService} from "../../../../services/subscriptionUnit/subscriptionUnit.service";
-import {SubscriptionUnit} from "../../../../shared/SubscriptionUnit";
+import {ProductInstance} from "../../../../shared/ProductInstance";
 import {UserService} from "../../../../services/user/user.service";
 import {User} from "../../../../shared/User";
 
@@ -16,7 +16,7 @@ import {User} from "../../../../shared/User";
 })
 
 export class SubscriptionDetailsComponent implements OnInit {
-  subscription: Subscription;
+  productOffering: ProductOffering;
   isSubscribed: boolean;
   notEnoughMoney: boolean;
   id;
@@ -42,7 +42,7 @@ export class SubscriptionDetailsComponent implements OnInit {
       this.subscriptionUnitService.getSubscriptionUnitsById(this.id).subscribe(
         subscriptionUnits => {
           for (let i = 0; i < subscriptionUnits.length; i++) {
-            if (subscriptionUnits[i].subscription.name === this.subscription.name)
+            if (subscriptionUnits[i].productOffering.name === this.productOffering.name)
               this.isSubscribed = true;
           }
         }
@@ -58,20 +58,20 @@ export class SubscriptionDetailsComponent implements OnInit {
 
   ban() {
     this.http.banSubscription(toNumber(this.subscriptionId)).subscribe(
-      subscription => this.subscription = subscription
+      subscription => this.productOffering = subscription
     );
   }
 
   unBan() {
     this.http.unBanSubscription(toNumber(this.subscriptionId)).subscribe(
-      subscription => this.subscription = subscription
+      subscription => this.productOffering = subscription
     );
   }
 
   getSubscription() {
     this.subscriptionId = this.route.snapshot.paramMap.get('id');
     this.http.getSubscriptionById(toNumber(this.subscriptionId)).subscribe(subscription => {
-      this.subscription = subscription;
+      this.productOffering = subscription;
     });
   }
 
@@ -88,7 +88,7 @@ export class SubscriptionDetailsComponent implements OnInit {
 
   subscribe(days: number) {
     if (!this.user.isBanned) {
-      let subscriptionUnit = new SubscriptionUnit(null, this.id, this.subscription, days, true, true);
+      let subscriptionUnit = new ProductInstance(null, this.id, this.productOffering, true);
       this.subscriptionUnitService.saveSubscriptionUnit(subscriptionUnit).subscribe(
         subscriptionUnit => {
           if (subscriptionUnit !== null) {
@@ -106,7 +106,7 @@ export class SubscriptionDetailsComponent implements OnInit {
       this.subscriptionUnitService.getSubscriptionUnitsById(this.id).subscribe(
         subscriptionUnits => {
           for (let i = 0; i < subscriptionUnits.length; i++) {
-            if (subscriptionUnits[i].subscription.name === this.subscription.name) {
+            if (subscriptionUnits[i].productOffering.name === this.productOffering.name) {
               this.subscriptionUnitService.deleteSubscriptionUnit(subscriptionUnits[i]).subscribe(
                 subscriptionUnit => this.isSubscribed = false
               );

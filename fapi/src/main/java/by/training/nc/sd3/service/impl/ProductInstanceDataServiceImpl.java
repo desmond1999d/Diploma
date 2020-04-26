@@ -1,7 +1,7 @@
 package by.training.nc.sd3.service.impl;
 
-import by.training.nc.sd3.models.SubscriptionUnitViewModel;
-import by.training.nc.sd3.service.SubscriptionUnitDataService;
+import by.training.nc.sd3.models.ProductInstanceViewModel;
+import by.training.nc.sd3.service.ProductInstanceDataService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -11,16 +11,16 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
-public class SubscriptionUnitDataServiceImpl implements SubscriptionUnitDataService {
+public class ProductInstanceDataServiceImpl implements ProductInstanceDataService {
 
     @Value("http://localhost:8081/")
     private String backendServerUrl;
 
-    public List<SubscriptionUnitViewModel> getSubscriptionUnitsByUserId(Long id) {
+    public List<ProductInstanceViewModel> getSubscriptionUnitsByUserId(Long id) {
 
         RestTemplate restTemplate = new RestTemplate();
-        SubscriptionUnitViewModel[] subscriptionUnits = restTemplate.getForObject(backendServerUrl + "/api/subscription-units/get-by-user-id?userId={id}",
-                SubscriptionUnitViewModel[].class, id);
+        ProductInstanceViewModel[] subscriptionUnits = restTemplate.getForObject(backendServerUrl + "/api/subscription-units/get-by-user-id?userId={id}",
+                ProductInstanceViewModel[].class, id);
         return subscriptionUnits == null ? Collections.emptyList() : Arrays.asList(subscriptionUnits);
     }
 
@@ -31,17 +31,17 @@ public class SubscriptionUnitDataServiceImpl implements SubscriptionUnitDataServ
     }
 
     @Override
-    public SubscriptionUnitViewModel save(SubscriptionUnitViewModel subscriptionUnitViewModel) {
+    public ProductInstanceViewModel save(ProductInstanceViewModel productInstanceViewModel) {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.postForObject(backendServerUrl + "/api/subscription-units/post",
-                subscriptionUnitViewModel, SubscriptionUnitViewModel.class);
+                productInstanceViewModel, ProductInstanceViewModel.class);
     }
 
     @Override
-    public SubscriptionUnitViewModel changeStatus(SubscriptionUnitViewModel subscriptionUnitViewModel) {
+    public ProductInstanceViewModel changeStatus(ProductInstanceViewModel productInstanceViewModel) {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.postForObject(backendServerUrl + "/api/subscription-units/change-status",
-                subscriptionUnitViewModel, SubscriptionUnitViewModel.class);
+                productInstanceViewModel, ProductInstanceViewModel.class);
     }
 
 }

@@ -1,26 +1,22 @@
 package by.training.nc.sd3.models;
 
-public class SubscriptionViewModel {
+public class ProductOfferingViewModel {
     private Long id;
     private String name;
     private String description;
     private int category;
-    private int perMonth;
-    private int perThreeMonths;
-    private int perYear;
+    private int price;
     private boolean isBanned;
 
-    public SubscriptionViewModel() {
+    public ProductOfferingViewModel() {
     }
 
-    public SubscriptionViewModel(Long id, String name, String description, int category, int perMonth, int perThreeMonth, int perYear, boolean isBanned) {
+    public ProductOfferingViewModel(Long id, String name, String description, int category, int price, boolean isBanned) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.category = category;
-        this.perMonth = perMonth;
-        this.perThreeMonths = perThreeMonths;
-        this.perYear = perYear;
+        this.price = price;
         this.isBanned = isBanned;
     }
 
@@ -52,30 +48,6 @@ public class SubscriptionViewModel {
         this.category = category.ordinal();
     }
 
-    public int getPerMonth() {
-        return perMonth;
-    }
-
-    public void setPerMonth(int perMonth) {
-        this.perMonth = perMonth;
-    }
-
-    public int getPerThreeMonths() {
-        return perThreeMonths;
-    }
-
-    public void setPerThreeMonths(int perThreeMonth) {
-        this.perThreeMonths = perThreeMonth;
-    }
-
-    public int getPerYear() {
-        return perYear;
-    }
-
-    public void setPerYear(int perYear) {
-        this.perYear = perYear;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -90,14 +62,12 @@ public class SubscriptionViewModel {
 
     @Override
     public String toString() {
-        return "SubscriptionViewModel{" +
+        return "ProductOfferingViewModel{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", category=" + category +
-                ", perMonth=" + perMonth +
-                ", perThreeMonth=" + perThreeMonths +
-                ", perYear=" + perYear +
+                ", price=" + price +
                 '}';
     }
 }

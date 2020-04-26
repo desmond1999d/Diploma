@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {SubscriptionUnitService} from "../../../../services/subscriptionUnit/subscriptionUnit.service";
 import {UserIDService} from "../../../../services/userID.service";
-import {SubscriptionUnit} from "../../../../shared/SubscriptionUnit";
+import {ProductInstance} from "../../../../shared/ProductInstance";
 import {UserService} from "../../../../services/user/user.service";
 import {ActivatedRoute} from "@angular/router";
 import {User} from "../../../../shared/User";
@@ -13,7 +13,7 @@ import {User} from "../../../../shared/User";
 })
 
 export class UserSubscriptionsComponent implements OnInit {
-  subscriptionUnits: SubscriptionUnit[];
+  productInstances: ProductInstance[];
   private observedId;
   private id;
   public user: User;
@@ -49,15 +49,15 @@ export class UserSubscriptionsComponent implements OnInit {
 
   getSubscriptionUnitsById(): void {
     this.http.getSubscriptionUnitsById(this.observedId).subscribe( subscriptionUnits => {
-      this.subscriptionUnits = subscriptionUnits;
+      this.productInstances = subscriptionUnits;
     });
   }
 
-  unsubscribe(subscriptionUnit: SubscriptionUnit) {
+  unsubscribe(subscriptionUnit: ProductInstance) {
     this.http.deleteSubscriptionUnit(subscriptionUnit).subscribe();
   }
 
-  changeStatus(subscriptionUnit: SubscriptionUnit) {
+  changeStatus(subscriptionUnit: ProductInstance) {
     this.http.changeStatusSubscriptionUnit(subscriptionUnit).subscribe();
   }
 }

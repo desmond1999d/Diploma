@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Subscription} from '../../../../shared/Subscription';
+import {ProductOffering} from '../../../../shared/ProductOffering';
 import {SubscriptionsShareService} from "../../../../services/subscriptionsShare.service";
 import {UserIDService} from "../../../../services/userID.service";
 import {UserService} from "../../../../services/user/user.service";
@@ -12,7 +12,7 @@ import {UserService} from "../../../../services/user/user.service";
 
 export class SubscriptionsListComponent implements OnInit {
 
-  subscriptions: Subscription[];
+  subscriptions: ProductOffering[];
 
   constructor(private subscriptionShareService: SubscriptionsShareService,
               private userIdService: UserIDService,

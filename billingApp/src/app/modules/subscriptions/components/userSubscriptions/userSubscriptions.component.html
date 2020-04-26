@@ -10,7 +10,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let productOffering of subscriptionUnits">
+    <tr *ngFor="let productOffering of productInstances">
       <td>{{productOffering.productOffering.name}}</td>
       <td>{{productOffering.daysLeft}}</td>
       <td>{{productOffering.willBeRenewed}}</td>

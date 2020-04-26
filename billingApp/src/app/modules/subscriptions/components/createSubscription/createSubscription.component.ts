@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {SubscriptionService} from "../../../../services/subscription/subscription.service";
-import {Subscription} from "../../../../shared/Subscription";
+import {ProductOffering} from "../../../../shared/ProductOffering";
 import {Categories} from "../../../../shared/Categories";
 import {SubscriptionsShareService} from "../../../../services/subscriptionsShare.service";
 
@@ -23,10 +23,8 @@ export class CreateSubscriptionComponent {
     return keys.slice(keys.length / 2, keys.length);
   }
 
-  createSubscription(name: string, description: string, category: number, feePerMonth: string,
-                     feePerThreeMonths: string, feePerYear: string) {
-    let subscription: Subscription = new Subscription(null, name, description, Number(category), Number(feePerYear),
-      Number(feePerThreeMonths), Number(feePerYear), false);
+  createSubscription(name: string, description: string, category: number, price: string) {
+    let subscription: ProductOffering = new ProductOffering(null, name, description, Number(category), Number(price), false);
     this.subscriptionService.saveSubscription(subscription).subscribe();
     this.subscriptionService.getSubscriptions().subscribe(
       subscriptions => {

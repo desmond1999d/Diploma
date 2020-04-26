@@ -6,14 +6,14 @@ public class StatisticsEntryViewModel {
 
     private Long id;
     private Long billingAccountId;
-    private SubscriptionViewModel serviceId;
+    private ProductOfferingViewModel serviceId;
     private Long sum;
     private LocalDateTime date;
 
     public StatisticsEntryViewModel() {
     }
 
-    public StatisticsEntryViewModel(Long billingAccountId, SubscriptionViewModel subscription, Long sum, LocalDateTime date) {
+    public StatisticsEntryViewModel(Long billingAccountId, ProductOfferingViewModel subscription, Long sum, LocalDateTime date) {
         this.billingAccountId = billingAccountId;
         this.serviceId = subscription;
         this.sum = sum;
@@ -36,11 +36,11 @@ public class StatisticsEntryViewModel {
         this.billingAccountId = billingAccountId;
     }
 
-    public SubscriptionViewModel getServiceId() {
+    public ProductOfferingViewModel getServiceId() {
         return serviceId;
     }
 
-    public void setServiceId(SubscriptionViewModel subscription) {
+    public void setServiceId(ProductOfferingViewModel subscription) {
         this.serviceId = subscription;
     }
 
