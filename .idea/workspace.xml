@@ -1,55 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f598fc7-b33d-4934-a527-6a84586ba27a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/ProductInstanceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/ProductOfferingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/ProductInstanceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/ProductOfferingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2b6f548d-6392-4086-a1ff-5c2f6bbccd02.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2b6f548d-6392-4086-a1ff-5c2f6bbccd02.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/sql/query.sql" beforeDir="false" afterPath="$PROJECT_DIR$/be/sql/query.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/sql/subscription-units.sql" beforeDir="false" afterPath="$PROJECT_DIR$/be/sql/subscription-units.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/sql/subscriptions.sql" beforeDir="false" afterPath="$PROJECT_DIR$/be/sql/subscriptions.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/BackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/controller/SubscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/controller/SubscriptionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/controller/SubscriptionUnitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/controller/SubscriptionUnitController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/entity/StatisticsEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/entity/StatisticsEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/entity/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/entity/ProductOffering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/entity/SubscriptionUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/entity/ProductInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/repository/SubscriptionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/repository/ProductOfferingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/repository/SubscriptionUnitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/repository/ProductInstanceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/SubscriptionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/SubscriptionUnitService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/BillingAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/BillingAccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/SubscriptionServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/SubscriptionUnitServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/UserAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/UserAccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/writeOffService/WriteOffService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/BackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/BackendApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/controller/SubscriptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/controller/SubscriptionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/controller/SubscriptionUnitController.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/controller/SubscriptionUnitController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/entity/StatisticsEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/entity/StatisticsEntry.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/entity/Subscription.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/entity/SubscriptionUnit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/repository/SubscriptionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/repository/SubscriptionUnitRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/service/SubscriptionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/service/SubscriptionUnitService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/service/impl/BillingAccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/service/impl/BillingAccountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/service/impl/SubscriptionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/service/impl/SubscriptionUnitServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/be/target/classes/by/training/nc/sd3/writeOffService/WriteOffService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/createBillingAccount/createBillingAccount.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/createBillingAccount/createBillingAccount.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/registration/registration.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/registration/registration.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/registration/registration.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/registration/registration.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/subscriptionDetails/subscriptionDetails.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/subscriptionDetails/subscriptionDetails.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/subscriptionsList/subscriptionsList.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/subscriptionsList/subscriptionsList.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/userSubscriptions/userSubscriptions.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/userSubscriptions/userSubscriptions.component.html" afterDir="false" />
-    </list>
+    <list default="true" id="9f598fc7-b33d-4934-a527-6a84586ba27a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/be/target/" />
     <ignored path="$PROJECT_DIR$/fapi/target/" />
@@ -96,7 +48,7 @@
           <entry key="project.closed" value="26" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="3" />
           <entry key="project.open.time.13" value="5" />
@@ -111,7 +63,7 @@
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -199,11 +151,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fapi/src/main/java/by/training/nc/sd3/service/impl/SubscriptionDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="272">
               <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-              <folding>
-                <element signature="e#539#562#1" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -229,7 +178,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/entity/ProductInstance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="102">
               <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
@@ -238,33 +187,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/entity/ProductOffering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
+            <state relative-caret-position="1326">
               <caret line="103" column="41" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
               <folding>
-                <element signature="e#941#942#0" expanded="true" />
-                <element signature="e#966#967#0" expanded="true" />
-                <element signature="e#1000#1001#0" expanded="true" />
-                <element signature="e#1028#1029#0" expanded="true" />
-                <element signature="e#1059#1060#0" expanded="true" />
-                <element signature="e#1086#1087#0" expanded="true" />
-                <element signature="e#1126#1127#0" expanded="true" />
-                <element signature="e#1158#1159#0" expanded="true" />
-                <element signature="e#1196#1197#0" expanded="true" />
-                <element signature="e#1230#1231#0" expanded="true" />
-                <element signature="e#1284#1285#0" expanded="true" />
-                <element signature="e#1330#1331#0" expanded="true" />
-                <element signature="e#1362#1363#0" expanded="true" />
-                <element signature="e#1393#1394#0" expanded="true" />
-                <element signature="e#1441#1442#0" expanded="true" />
-                <element signature="e#1511#1512#0" expanded="true" />
                 <element signature="e#1543#1544#0" expanded="true" />
                 <element signature="e#1574#1575#0" expanded="true" />
-                <element signature="e#1619#1620#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#2021#2022#0" expanded="true" />
-                <element signature="e#2052#2053#0" expanded="true" />
-                <element signature="e#2099#2100#0" expanded="true" />
-                <element signature="e#2132#2133#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -273,12 +200,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/ProductInstanceServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="578">
               <caret line="47" column="80" selection-start-line="47" selection-start-column="80" selection-end-line="47" selection-end-column="80" />
-              <folding>
-                <element signature="e#3464#3465#0" expanded="true" />
-                <element signature="e#3531#3532#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -286,12 +209,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/BillingAccountServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-              <folding>
-                <element signature="e#1359#1360#0" expanded="true" />
-                <element signature="e#1418#1419#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="266">
+              <caret line="77" column="52" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -299,7 +218,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/billingApp/src/app/services/subscriptionsShare.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="323">
               <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -320,7 +239,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/billingApp/src/app/services/userID.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="34">
               <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -468,6 +387,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -637,8 +558,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -746,11 +665,12 @@
       <workItem from="1557476715501" duration="4167000" />
       <workItem from="1557942049025" duration="689000" />
       <workItem from="1587837350595" duration="6443000" />
+      <workItem from="1587898830463" duration="634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264648000" />
+    <option name="totallyTimeSpent" value="265282000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -770,15 +690,15 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Web" order="4" side_tool="true" weight="0.32995737" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.2185501" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.22068231" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info id="Database Changes" order="8" show_stripe_button="false" weight="0.32889125" />
+      <window_info id="Database Changes" order="8" weight="0.32889125" />
       <window_info id="TypeScript" order="9" weight="0.32462686" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.5836887" weight="0.25830653" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.4163113" side_tool="true" weight="0.25830653" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.3290461" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.3290461" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="4" visible="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Spring" order="5" show_stripe_button="false" weight="0.32960895" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.3290461" />
@@ -1011,9 +931,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#845#846#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1046,13 +963,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/subscriptionsList/subscriptionsList.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/billingApp/src/app/modules/subscriptions/components/createSubscription/createSubscription.component.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -1063,21 +974,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/billingApp/src/app/services/http.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-180" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.5.RELEASE/spring-boot-autoconfigure-2.0.5.RELEASE.jar!/org/springframework/boot/autoconfigure/web/ServerProperties.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
           <caret line="63" column="16" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="16" />
-          <folding>
-            <element signature="e#2248#2249#0" expanded="true" />
-            <element signature="e#2280#2281#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1099,9 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,9 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1129,40 +1026,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/billingApp/src/app/services/subscriptionsShare.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://2b6f548d-6392-4086-a1ff-5c2f6bbccd02/schema/backend/table/user_account">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/billingApp/src/app/services/userID.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/writeOffService/WriteOffService.java" />
     <entry file="file://$PROJECT_DIR$/fapi/src/main/java/by/training/nc/sd3/service/impl/SubscriptionDataServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="272">
           <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-          <folding>
-            <element signature="e#539#562#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1182,70 +1050,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/entity/ProductInstance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="102">
           <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/writeOffService/WriteOffService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="60" column="40" lean-forward="true" selection-start-line="60" selection-start-column="40" selection-end-line="62" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/entity/ProductOffering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
+        <state relative-caret-position="1326">
           <caret line="103" column="41" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
           <folding>
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#966#967#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1028#1029#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-            <element signature="e#1158#1159#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1230#1231#0" expanded="true" />
-            <element signature="e#1284#1285#0" expanded="true" />
-            <element signature="e#1330#1331#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1393#1394#0" expanded="true" />
-            <element signature="e#1441#1442#0" expanded="true" />
-            <element signature="e#1511#1512#0" expanded="true" />
             <element signature="e#1543#1544#0" expanded="true" />
             <element signature="e#1574#1575#0" expanded="true" />
-            <element signature="e#1619#1620#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#2021#2022#0" expanded="true" />
-            <element signature="e#2052#2053#0" expanded="true" />
-            <element signature="e#2099#2100#0" expanded="true" />
-            <element signature="e#2132#2133#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/ProductInstanceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="578">
           <caret line="47" column="80" selection-start-line="47" selection-start-column="80" selection-end-line="47" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/billingApp/src/app/services/subscriptionsShare.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
-            <element signature="e#3464#3465#0" expanded="true" />
-            <element signature="e#3531#3532#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://2b6f548d-6392-4086-a1ff-5c2f6bbccd02/schema/backend/table/user_account">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/billingApp/src/app/services/userID.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/be/src/main/java/by/training/nc/sd3/service/impl/BillingAccountServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-          <folding>
-            <element signature="e#1359#1360#0" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="77" column="52" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
         </state>
       </provider>
     </entry>
