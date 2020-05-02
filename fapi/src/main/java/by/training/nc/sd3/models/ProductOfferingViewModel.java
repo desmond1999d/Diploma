@@ -1,5 +1,7 @@
 package by.training.nc.sd3.models;
 
+import java.util.List;
+
 public class ProductOfferingViewModel {
     private Long id;
     private String name;
@@ -7,17 +9,19 @@ public class ProductOfferingViewModel {
     private int category;
     private int price;
     private boolean isBanned;
+    private List<OfferParamViewModel> params;
 
     public ProductOfferingViewModel() {
     }
 
-    public ProductOfferingViewModel(Long id, String name, String description, int category, int price, boolean isBanned) {
+    public ProductOfferingViewModel(Long id, String name, String description, int category, int price, boolean isBanned, List<OfferParamViewModel> params) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.category = category;
         this.price = price;
         this.isBanned = isBanned;
+        this.params = params;
     }
 
     public Long getId() {
@@ -60,6 +64,14 @@ public class ProductOfferingViewModel {
         isBanned = banned;
     }
 
+    public List<OfferParamViewModel> getParams() {
+        return params;
+    }
+
+    public void setParams(List<OfferParamViewModel> params) {
+        this.params = params;
+    }
+
     @Override
     public String toString() {
         return "ProductOfferingViewModel{" +
@@ -68,6 +80,7 @@ public class ProductOfferingViewModel {
                 ", description='" + description + '\'' +
                 ", category=" + category +
                 ", price=" + price +
+                ", params" + params +
                 '}';
     }
 }

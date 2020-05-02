@@ -1,22 +1,15 @@
-package by.training.nc.sd3.entity;
+package by.training.nc.sd3.models;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "params")
-public class OfferParam {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class OfferParamViewModel {
     private Long id;
     private String name;
     private String value;
     private Long productOfferingId;
 
-    public OfferParam() {
+    public OfferParamViewModel() {
     }
 
-    public OfferParam(String name, String value, Long productOfferingId) {
+    public OfferParamViewModel(String name, String value, Long productOfferingId) {
         this.name = name;
         this.value = value;
         this.productOfferingId = productOfferingId;
@@ -56,7 +49,7 @@ public class OfferParam {
 
     @Override
     public String toString() {
-        return "OfferParam{" +
+        return "OfferParamViewModel{" +
                 "id=" + id +
                 ", name=" + name +
                 ", value='" + value +

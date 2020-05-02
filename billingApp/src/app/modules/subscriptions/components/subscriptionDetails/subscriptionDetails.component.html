@@ -9,7 +9,8 @@
           <h1>{{productOffering.name}}</h1>
           <img src="../../../../../assets/icons/no_image.png" class="product-image">
           <p class="form-row align-items-center">{{productOffering.description}}</p>
-          <p></p>
+          <label class="font-weight-bold">Product offering params</label>
+          <p class="form-row align-items-center" *ngFor="let detail of productOffering.params">{{detail.name + ': ' + detail.value}}</p>
           <div class="form-row align-items-center">
             <p>Price: </p>
             <p class="ml-3">{{productOffering.price + '$'}}</p>
