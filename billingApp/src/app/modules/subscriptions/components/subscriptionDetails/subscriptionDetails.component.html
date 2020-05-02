@@ -7,55 +7,47 @@
       <ul class="list-group">
         <li class="list-group-item">
           <h1>{{productOffering.name}}</h1>
-          <p class="lead">{{productOffering.description}}</p>
-          <table class="table">
-            <thead>
-            <tr>
-              <th scope="col">Period</th>
-              <th scope="col">Sum</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>Month</td>
-              <td>{{productOffering.cost + "$"}}</td>
-            </tr>
-            <tr>
-              <td>3 months</td>
-              <td>{{productOffering.perThreeMonths + "$"}}</td>
-            </tr>
-            <tr>
-              <td>1 year</td>
-              <td>{{productOffering.perYear + "$"}}</td>
-            </tr>
-            </tbody>
-          </table>
-          <select #periodSelect class="form-control">
-            <option>1 month</option>
-            <option>3 months</option>
-            <option>1 year</option>
-          </select>
+          <img src="../../../../../assets/icons/no_image.png" class="product-image">
+          <p class="form-row align-items-center">{{productOffering.description}}</p>
           <p></p>
-          <div *ngIf="id > -1">
-            <div *ngIf="!productOffering.isBanned">
-              <button *ngIf="!user.isAdmin && !isSubscribed && !user.isBanned" type="submit" class="btn btn-outline-success my-2 my-sm-0"
-                      (click)="periodDecision(periodSelect)"
-                      routerLink="../profileDetails">Subscribe
-              </button>
-              <button *ngIf="!user.isAdmin && isSubscribed && !user.isBanned" type="submit" class="btn btn-outline-danger my-2 my-sm-0"
-                      (click)="unsubscribe()"
-                      routerLink="../profileDetails">Unsubscribe
-              </button>
-              <p *ngIf="user.isBanned && !user.isAdmin" class="text-danger">It seems your account is banned.</p>
+          <div class="form-row align-items-center">
+            <p>Price: </p>
+            <p class="ml-3">{{productOffering.price + '$'}}</p>
+          </div>
+          <div class="form-row align-items-center" *ngIf="id > -1">
+            <label for="productQuantity">Quantity: </label>
+            <div class="ml-3 align-center def-number-input number-input safari_only">
+              <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+              <input #quantity id="productQuantity" class="quantity" min="1" name="quantity" value="1" type="number">
+              <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
             </div>
-            <p *ngIf="!user.isAdmin && productOffering.isBanned" class="text-danger">Service is temporarily
-              unavailable.</p>
-            <button *ngIf="user.isAdmin && !productOffering.isBanned" type="submit" class="btn btn-outline-danger my-2 my-sm-0"
-                    (click)="ban()">Ban
-            </button>
-            <button *ngIf="user.isAdmin && productOffering.isBanned" type="submit" class="btn btn-outline-success my-2 my-sm-0"
-                    (click)="unBan()">Unban
-            </button>
+            <div class="">
+              <div *ngIf="!productOffering.isBanned">
+                <div *ngIf="!user.isAdmin && !isSubscribed && !user.isBanned">
+                  <button type="submit"
+                          class="btn btn-outline-success my-2 my-sm-0 ml-3"
+                          (click)="buyQuantity(quantity.value)"
+                          routerLink="../profileDetails">Buy
+                  </button>
+                  <button type="submit"
+                          class="btn btn-outline-success my-2 my-sm-0 ml-3"
+                          (click)="buyQuantity(quantity.value)"
+                          routerLink="../profileDetails">Add to cart
+                  </button>
+                </div>
+              </div>
+              <p *ngIf="user.isBanned && !user.isAdmin" class="text-danger ml-3">It seems your account is banned.</p>
+              <p *ngIf="!user.isAdmin && productOffering.isBanned" class="text-dangerml-3">Service is temporarily
+                unavailable.</p>
+              <button *ngIf="user.isAdmin && !productOffering.isBanned" type="submit"
+                      class="btn btn-outline-danger my-2 my-sm-0 ml-3"
+                      (click)="ban()">Ban
+              </button>
+              <button *ngIf="user.isAdmin && productOffering.isBanned" type="submit"
+                      class="btn btn-outline-success my-2 my-sm-0 ml-3"
+                      (click)="unBan()">Unban
+              </button>
+            </div>
           </div>
           <p *ngIf="notEnoughMoney" class="text-danger">Failed, please check your billing account settings.</p>
         </li>

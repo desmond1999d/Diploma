@@ -10,6 +10,8 @@ public interface ProductInstanceService {
 
     ProductInstance save(ProductInstance productInstance);
 
+    Iterable<ProductInstance> save(Iterable<ProductInstance> productInstances);
+
     void delete(Long id);
 
     Iterable<ProductInstance> getByBillingAccountId(Long ownerId);

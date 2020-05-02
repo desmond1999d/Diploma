@@ -43,6 +43,17 @@ public class SubscriptionUnitController {
         return productInstanceService.save(productInstance);
     }
 
+    @RequestMapping(value = "/post-all", method = RequestMethod.POST)
+    public Iterable<ProductInstance> saveAll(@RequestBody Iterable<ProductInstance> productInstances) {
+        ProductInstance productInstance = productInstances.iterator().next();
+        Optional<UserAccount> userAccountOpt = userAccountService.getUserAccountById(productInstance.getUserId());
+        if (userAccountOpt.isPresent() && userAccountOpt.get().getActiveBillingAccountId() != null) {
+            Optional<BillingAccount> billingAccountOpt = billingAccountService.getById(userAccountOpt.get().getActiveBillingAccountId());
+            billingAccountOpt.ifPresent(productInstance::setBillingAccount);
+        }
+        return productInstanceService.save(productInstances);
+    }
+
     @DeleteMapping(value = "/delete/{id}")
     public void delete(@PathVariable Long id) {
         productInstanceService.delete(id);

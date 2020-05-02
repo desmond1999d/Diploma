@@ -5,8 +5,22 @@
       <ul class="list-group">
         <li class="list-group-item"
             *ngFor="let productOffering of subscriptions | paginate: { itemsPerPage: 4, currentPage: page }">
-          <h2><a class="nav-link" routerLink="/details/{{productOffering.id}}">{{productOffering.name}}</a></h2>
-          <p class="lead">{{productOffering.description}}</p>
+          <div class='container-fluid'>
+            <div class="card mx-auto col-md-3 col-10 mt-5"><img class='mx-auto img-thumbnail'
+                                                                src="https://i.imgur.com/pjITBzX.jpg" width="auto"
+                                                                height="auto"/>
+              <div class="card-body text-center mx-auto">
+                <div class='cvp'>
+                  <h5 class="card-title font-weight-bold">{{productOffering.name}}</h5>
+                  <p class="card-text">{{productOffering.price}}</p>
+                  <a routerLink="/details/{{productOffering.id}}"
+                     class="btn details px-auto">view details</a>
+                  <br/> <a routerLink="/details/{{productOffering.id}}" class="btn cart px-auto">ADD
+                  TO CART</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
     </div>

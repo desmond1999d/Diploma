@@ -19,6 +19,10 @@ export class SubscriptionUnitService {
     return this.http.post<ProductInstance>('/api/subsunits/save', subscriptionUnit);
   }
 
+  public saveSubscriptionUnits(subscriptionUnit: Array<ProductInstance>) {
+    return this.http.post<ProductInstance>('/api/subsunits/save-all', subscriptionUnit);
+  }
+
   public deleteSubscriptionUnit(subscriptionUnit: ProductInstance) {
     return this.http.delete('/api/subsunits/delete/' + subscriptionUnit.id + '?id=' + subscriptionUnit.id);
   }

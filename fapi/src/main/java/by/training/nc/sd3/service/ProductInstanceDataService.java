@@ -12,5 +12,7 @@ public interface ProductInstanceDataService {
 
     ProductInstanceViewModel save(ProductInstanceViewModel productInstanceViewModel);
 
+    List<ProductInstanceViewModel> saveAll(List<ProductInstanceViewModel> productInstanceViewModel);
+
     ProductInstanceViewModel changeStatus(ProductInstanceViewModel productInstanceViewModel);
 }

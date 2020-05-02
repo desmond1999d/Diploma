@@ -15,5 +15,8 @@ public interface ProductInstanceRepository extends CrudRepository<ProductInstanc
     Integer countByUserId(@Param("userId") Long userAccountId);
 
     @Override
+    <S extends ProductInstance> Iterable<S> saveAll(Iterable<S> iterable);
+
+    @Override
     void deleteById(Long aLong);
 }

@@ -75,21 +75,18 @@ export class SubscriptionDetailsComponent implements OnInit {
     });
   }
 
-  periodDecision(selectDOMElement) {
-    let days: number;
-    if (selectDOMElement.selectedIndex === 0)
-      days = 30;
-    else if (selectDOMElement.selectedIndex === 1)
-      days = 90;
-    else if (selectDOMElement.selectedIndex === 2)
-      days = 365;
-    this.subscribe(days)
+  buyQuantity(quantity) {
+    this.buy(toNumber(quantity));
   }
 
-  subscribe(days: number) {
+  buy(quantity: number) {
     if (!this.user.isBanned) {
-      let subscriptionUnit = new ProductInstance(null, this.id, this.productOffering, true);
-      this.subscriptionUnitService.saveSubscriptionUnit(subscriptionUnit).subscribe(
+      let subscriptionUnits = [];
+      for (let i = 0; i < quantity; i++) {
+        let subscriptionUnit = new ProductInstance(null, this.id, this.productOffering, true);
+        subscriptionUnits.push(subscriptionUnit);
+      }
+      this.subscriptionUnitService.saveSubscriptionUnits(subscriptionUnits).subscribe(
         subscriptionUnit => {
           if (subscriptionUnit !== null) {
             this.isSubscribed = true;

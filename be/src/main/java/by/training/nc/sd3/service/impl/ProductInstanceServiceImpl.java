@@ -53,6 +53,27 @@ public class ProductInstanceServiceImpl implements ProductInstanceService {
     }
 
     @Override
+    public Iterable<ProductInstance> save(Iterable<ProductInstance> productInstances) {
+        ProductInstance productInstance = productInstances.iterator().next();
+        Optional<UserAccount> userAccountOptional = this.userAccountRepository.findById(productInstances.iterator().next().getUserId());
+        productInstance.setCreationDate(new Date());
+        if (userAccountOptional.isPresent()) {
+            UserAccount user = userAccountOptional.get();
+            if (user.getActiveBillingAccountId() != null) {
+                Optional<BillingAccount> billingAccountOptional =
+                        this.billingAccountRepository.findById(user.getActiveBillingAccountId());
+                if (billingAccountOptional.isPresent()) {
+                    BillingAccount billingAccount = billingAccountOptional.get();
+                    billingAccount.setMoney(billingAccount.getMoney() - productInstance.getProductOffering().getCost());
+                    this.billingAccountRepository.save(billingAccount);
+                    return this.productInstanceRepository.saveAll(productInstances);
+                }
+            }
+        }
+        return null;
+    }
+
+    @Override
     public void delete(Long id) {
         Iterable<ProductInstance> subscriptionUnitOptional = this.productInstanceRepository.findAll();
         subscriptionUnitOptional.forEach(

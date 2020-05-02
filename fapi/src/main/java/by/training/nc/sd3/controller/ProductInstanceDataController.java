@@ -30,6 +30,11 @@ public class ProductInstanceDataController {
         return ResponseEntity.ok(productInstanceDataService.save(productInstanceViewModel));
     }
 
+    @PostMapping(value = "/save-all")
+    public ResponseEntity<List<ProductInstanceViewModel>> save(@RequestBody List<ProductInstanceViewModel> productInstanceViewModel) {
+        return ResponseEntity.ok(productInstanceDataService.saveAll(productInstanceViewModel));
+    }
+
     @PostMapping(value = "/change-status")
     public ResponseEntity<ProductInstanceViewModel> changeStatus(@RequestBody ProductInstanceViewModel productInstanceViewModel) {
         return ResponseEntity.ok(productInstanceDataService.changeStatus(productInstanceViewModel));

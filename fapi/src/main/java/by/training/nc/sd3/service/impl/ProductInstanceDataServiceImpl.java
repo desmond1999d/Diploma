@@ -38,6 +38,13 @@ public class ProductInstanceDataServiceImpl implements ProductInstanceDataServic
     }
 
     @Override
+    public List<ProductInstanceViewModel> saveAll(List<ProductInstanceViewModel> productInstanceViewModel) {
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.postForObject(backendServerUrl + "/api/subscription-units/post-all",
+                productInstanceViewModel, List.class);
+    }
+
+    @Override
     public ProductInstanceViewModel changeStatus(ProductInstanceViewModel productInstanceViewModel) {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.postForObject(backendServerUrl + "/api/subscription-units/change-status",
