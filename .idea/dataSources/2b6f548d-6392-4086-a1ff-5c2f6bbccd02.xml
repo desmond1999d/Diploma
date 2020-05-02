@@ -1114,200 +1114,238 @@
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="280" parent="2" name="billing_account"/>
-    <table id="281" parent="2" name="payments"/>
-    <table id="282" parent="2" name="product_instance"/>
-    <table id="283" parent="2" name="product_offering"/>
-    <table id="284" parent="2" name="user_account"/>
-    <column id="285" parent="280" name="id">
+    <table id="281" parent="2" name="params"/>
+    <table id="282" parent="2" name="payments"/>
+    <table id="283" parent="2" name="product_instance"/>
+    <table id="284" parent="2" name="product_offering"/>
+    <table id="285" parent="2" name="user_account"/>
+    <column id="286" parent="280" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="280" name="ownerId">
+    <column id="287" parent="280" name="ownerId">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="287" parent="280" name="creditCardNumber">
+    <column id="288" parent="280" name="creditCardNumber">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="288" parent="280" name="name">
+    <column id="289" parent="280" name="name">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="280" name="password">
+    <column id="290" parent="280" name="password">
       <Position>5</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="280" name="money">
+    <column id="291" parent="280" name="money">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="280" name="isBanned">
+    <column id="292" parent="280" name="isBanned">
       <Position>7</Position>
       <DataType>tinyint(4)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="292" parent="280" name="name_UNIQUE">
+    <index id="293" parent="280" name="name_UNIQUE">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="293" parent="280" name="password_UNIQUE">
+    <index id="294" parent="280" name="password_UNIQUE">
       <ColNames>password</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="294" parent="280" name="PRIMARY">
+    <key id="295" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="295" parent="280" name="name_UNIQUE">
+    <key id="296" parent="280" name="name_UNIQUE">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>name_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="296" parent="280" name="password_UNIQUE">
+    <key id="297" parent="280" name="password_UNIQUE">
       <ColNames>password</ColNames>
       <UnderlyingIndexName>password_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="297" parent="281" name="id">
+    <column id="298" parent="281" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="281" name="billingAccountId">
+    <column id="299" parent="281" name="name">
+      <Position>2</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="300" parent="281" name="value">
+      <Position>3</Position>
+      <DataType>varchar(45)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="301" parent="281" name="productOfferingId">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="302" parent="281" name="offer_is_idx">
+      <ColNames>productOfferingId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="303" parent="281" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="304" parent="281" name="productOfferingId">
+      <ColNames>productOfferingId</ColNames>
+      <RefSchemaName>backend</RefSchemaName>
+      <RefTableName>product_offering</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="305" parent="282" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="306" parent="282" name="billingAccountId">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="299" parent="281" name="sum">
+    <column id="307" parent="282" name="sum">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="300" parent="281" name="date">
+    <column id="308" parent="282" name="date">
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="281" name="serviceId">
+    <column id="309" parent="282" name="serviceId">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="302" parent="281" name="billingAccountId_idx">
+    <index id="310" parent="282" name="billingAccountId_idx">
       <ColNames>billingAccountId</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="303" parent="281" name="serviceId_idx">
+    <index id="311" parent="282" name="serviceId_idx">
       <ColNames>serviceId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="304" parent="281" name="PRIMARY">
+    <key id="312" parent="282" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="305" parent="281" name="billingAccountId_fk">
+    <foreign-key id="313" parent="282" name="billingAccountId_fk">
       <ColNames>billingAccountId</ColNames>
       <RefSchemaName>backend</RefSchemaName>
       <RefTableName>billing_account</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="306" parent="281" name="serviceId_fk">
+    <foreign-key id="314" parent="282" name="serviceId_fk">
       <ColNames>serviceId</ColNames>
       <RefSchemaName>backend</RefSchemaName>
       <RefTableName>product_offering</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="307" parent="282" name="id">
+    <column id="315" parent="283" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="282" name="subscriptionId">
+    <column id="316" parent="283" name="subscriptionId">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="282" name="userId">
+    <column id="317" parent="283" name="userId">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="282" name="billingAccountId">
+    <column id="318" parent="283" name="billingAccountId">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="282" name="status">
+    <column id="319" parent="283" name="status">
       <Position>5</Position>
       <DataType>tinyint(4)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="282" name="creationDate">
+    <column id="320" parent="283" name="creationDate">
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="313" parent="282" name="id_UNIQUE">
+    <index id="321" parent="283" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="314" parent="282" name="subscriptionId">
+    <index id="322" parent="283" name="subscriptionId">
       <ColNames>subscriptionId</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="315" parent="282" name="userAccountId_idx">
+    <index id="323" parent="283" name="userAccountId_idx">
       <ColNames>userId</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="316" parent="282" name="billingAccountId_idx">
+    <index id="324" parent="283" name="billingAccountId_idx">
       <ColNames>billingAccountId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="317" parent="282" name="PRIMARY">
+    <key id="325" parent="283" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="318" parent="282" name="id_UNIQUE">
+    <key id="326" parent="283" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
-    <foreign-key id="319" parent="282" name="subscriptionId">
+    <foreign-key id="327" parent="283" name="subscriptionId">
       <ColNames>subscriptionId</ColNames>
       <RefSchemaName>backend</RefSchemaName>
       <RefTableName>product_offering</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="320" parent="282" name="userAccountId">
+    <foreign-key id="328" parent="283" name="userAccountId">
       <ColNames>userId</ColNames>
       <RefSchemaName>backend</RefSchemaName>
       <RefTableName>user_account</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="321" parent="282" name="billingAccountId">
+    <foreign-key id="329" parent="283" name="billingAccountId">
       <ColNames>billingAccountId</ColNames>
       <RefSchemaName>backend</RefSchemaName>
       <RefTableName>billing_account</RefTableName>
@@ -1315,124 +1353,124 @@
       <OnUpdate>set-null</OnUpdate>
       <OnDelete>set-null</OnDelete>
     </foreign-key>
-    <column id="322" parent="283" name="id">
+    <column id="330" parent="284" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="323" parent="283" name="name">
+    <column id="331" parent="284" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="324" parent="283" name="description">
+    <column id="332" parent="284" name="description">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="325" parent="283" name="category">
+    <column id="333" parent="284" name="category">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="283" name="cost">
+    <column id="334" parent="284" name="cost">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="283" name="isBanned">
+    <column id="335" parent="284" name="isBanned">
       <Position>6</Position>
       <DataType>tinyint(4)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="328" parent="283" name="id_UNIQUE">
+    <index id="336" parent="284" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="329" parent="283" name="PRIMARY">
+    <key id="337" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="330" parent="283" name="id_UNIQUE">
+    <key id="338" parent="284" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="331" parent="284" name="id">
+    <column id="339" parent="285" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="332" parent="284" name="name">
+    <column id="340" parent="285" name="name">
       <Position>2</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="284" name="password">
+    <column id="341" parent="285" name="password">
       <Position>3</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="284" name="email">
+    <column id="342" parent="285" name="email">
       <Position>4</Position>
       <DataType>varchar(45)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="335" parent="284" name="activeBillingAccountId">
+    <column id="343" parent="285" name="activeBillingAccountId">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="336" parent="284" name="isAdmin">
+    <column id="344" parent="285" name="isAdmin">
       <Position>6</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="284" name="isBanned">
+    <column id="345" parent="285" name="isBanned">
       <Position>7</Position>
       <DataType>tinyint(4)|0s</DataType>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="338" parent="284" name="id_UNIQUE">
+    <index id="346" parent="285" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="339" parent="284" name="name_UNIQUE">
+    <index id="347" parent="285" name="name_UNIQUE">
       <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="340" parent="284" name="password_UNIQUE">
+    <index id="348" parent="285" name="password_UNIQUE">
       <ColNames>password</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="341" parent="284" name="activeBillingAccount_idx">
+    <index id="349" parent="285" name="activeBillingAccount_idx">
       <ColNames>activeBillingAccountId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="342" parent="284" name="PRIMARY">
+    <key id="350" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="343" parent="284" name="id_UNIQUE">
+    <key id="351" parent="285" name="id_UNIQUE">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>id_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="344" parent="284" name="name_UNIQUE">
+    <key id="352" parent="285" name="name_UNIQUE">
       <ColNames>name</ColNames>
       <UnderlyingIndexName>name_UNIQUE</UnderlyingIndexName>
     </key>
-    <key id="345" parent="284" name="password_UNIQUE">
+    <key id="353" parent="285" name="password_UNIQUE">
       <ColNames>password</ColNames>
       <UnderlyingIndexName>password_UNIQUE</UnderlyingIndexName>
     </key>

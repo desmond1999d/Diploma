@@ -1,6 +1,7 @@
 package by.training.nc.sd3.entity;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -14,18 +15,19 @@ public class ProductOffering {
     private int category;
     private int cost;
     private boolean isBanned;
+    @OneToMany(mappedBy = "productOfferingId", fetch = FetchType.LAZY, cascade = CascadeType.ALL, targetEntity = OfferParam.class)
+    private List<OfferParam> params;
 
     public ProductOffering() {
     }
 
-    public ProductOffering(String name, String description,
-                           int category, int perMonth, int perThreeMonths,
-                           int perYear, boolean isBanned) {
+    public ProductOffering(String name, String description, int category, int cost, boolean isBanned, List<OfferParam> params) {
         this.name = name;
         this.description = description;
         this.category = category;
-        this.cost = perMonth;
+        this.cost = cost;
         this.isBanned = isBanned;
+        this.params = params;
     }
 
     public Long getId() {
@@ -76,12 +78,32 @@ public class ProductOffering {
         isBanned = banned;
     }
 
+    public void setCategory(int category) {
+        this.category = category;
+    }
+
+    public boolean isBanned() {
+        return isBanned;
+    }
+
+    public void setBanned(boolean banned) {
+        isBanned = banned;
+    }
+
+    public List<OfferParam> getParams() {
+        return params;
+    }
+
+    public void setParams(List<OfferParam> params) {
+        this.params = params;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ProductOffering that = (ProductOffering) o;
-        return id == that.id &&
+        return id.equals(that.id) &&
                 cost == that.cost &&
                 Objects.equals(name, that.name) &&
                 Objects.equals(description, that.description) &&
@@ -90,8 +112,7 @@ public class ProductOffering {
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(id, name, description, category, cost);
+        return Objects.hash(id, name, description, category, cost, params);
     }
 
     @Override
@@ -102,6 +123,7 @@ public class ProductOffering {
                 ", description='" + description + '\'' +
                 ", category=" + category + '\'' +
                 ", cost=" + cost + '\'' +
+                ", params=" + params + '\'' +
                 '}';
     }
 }
