@@ -12,6 +12,12 @@ export class HttpService {
   readonly usersUrl = 'assets/users.json';
   readonly subscriptionsUrl = 'assets/subscriptions.json';
   readonly billingAccountsUrl = 'assets/billing_accounts.json';
+  public static readonly httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      'Authorization': 'my-auth-token'
+    })
+  };
 
   constructor(private http: HttpClient) {}
 

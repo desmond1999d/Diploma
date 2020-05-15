@@ -1,8 +1,14 @@
-<nav class="navbar navbar-light bg-light navbar-expand">
-  <a class="nav-link" (click)="getAllSubscriptions()" routerLink="/subscriptions">
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" (click)="getAllSubscriptions()" routerLink="/subscriptions">
     <img src="../../../../../assets/icons/icon.png" class="nav-icon">
   </a>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+  <button type="button" class="navbar-toggler btn btn-outline-success my-2 my-sm-0" (click)="isCollapsed = !isCollapsed;"
+          [attr.aria-expanded]="!isCollapsed" aria-controls="collapseEvent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" [collapse]="!isCollapsed">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <a class="nav-link" (click)="filter('development')" routerLink="/subscriptions">Development</a>
@@ -23,18 +29,20 @@
         <a class="nav-link" routerLink="/createSubscription">Create</a>
       </li>
     </ul>
-    <form class="form-inline justify-content-center">
+    <div class="d-inline-flex">
       <input #searchRequest class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button type="button" routerLink="/subscriptions" (click)="search(searchRequest.value); searchRequest.value=''"
               class="btn btn-outline-success my-2 my-sm-0">Search
       </button>
-    </form>
-  </div>
+    </div>
     <img src="../../../../../assets/icons/account.png" class="nav-icon"
          [routerLink]="loggedUserID >= 0 ? (isAdmin ? '/adminAccount' : '/user/'+userIDService.getID()[0]) : ''">
-    <button *ngIf="userIDService.getID() < 0" type="button" class="btn btn-outline-success my-2 my-sm-0" routerLink="/login">Sign in
+    <button *ngIf="userIDService.getID() < 0" type="button" class="btn btn-outline-success my-2 my-sm-0"
+            routerLink="/login">Sign in
     </button>
-    <button *ngIf="userIDService.getID() >= 0" type="button" class="btn btn-outline-success my-2 my-sm-0" routerLink="" (click)="logOut()">
+    <button *ngIf="userIDService.getID() >= 0" type="button" class="btn btn-outline-success my-2 my-sm-0" routerLink=""
+            (click)="logOut()">
       Sign out
     </button>
+  </div>
 </nav>

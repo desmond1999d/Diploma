@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {HttpService} from './http.service';
-import {map} from 'rxjs/operators';
 import {ProductOffering} from "../shared/ProductOffering";
 
 const INIT_DATA = [];

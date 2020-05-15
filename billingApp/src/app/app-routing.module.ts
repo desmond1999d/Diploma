@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SubscriptionsListComponent } from './modules/subscriptions/components/subscriptionsList/subscriptionsList.component';
-import {SubscriptionDetailsComponent} from './modules/subscriptions/components/subscriptionDetails/subscriptionDetails.component';
+import { ProductsListComponent } from './modules/subscriptions/components/productsList/productsList.component';
+import {ProductDetailsComponent} from './modules/subscriptions/components/productDetails/productDetails.component';
 import {LoginComponent} from './modules/subscriptions/components/login/login.component.';
 import {RegistrationComponent} from './modules/subscriptions/components/registration/registration.component';
 import {CreateBillingAccountComponent} from './modules/subscriptions/components/createBillingAccount/createBillingAccount.component';
@@ -11,10 +11,10 @@ import {AdminAccountComponent} from "./modules/subscriptions/components/adminAcc
 import {CreateSubscriptionComponent} from "./modules/subscriptions/components/createSubscription/createSubscription.component";
 
 const routes: Routes = [
-  { path: 'subscriptions', component: SubscriptionsListComponent },
+  { path: 'subscriptions', component: ProductsListComponent },
   { path: '', redirectTo: '/subscriptions',
   pathMatch: 'full'},
-  { path: 'details/:id', component: SubscriptionDetailsComponent },
+  { path: 'details/:id', component: ProductDetailsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'createBillingAccount', component: CreateBillingAccountComponent },

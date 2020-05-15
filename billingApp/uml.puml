@@ -1,0 +1,263 @@
+@startuml
+class OfferParam {
+    +id: number
+    +name: string
+    +value: string
+}
+class ProductOffering {
+    +id: number
+    +name: String
+    +description: String
+    +category: number
+    +price: number
+    +params: OfferParam[]
+    +isBanned: boolean
+    +getName(): String
+    +setName(name: String): void
+    +setDescription(description: String): void
+    +getDescription(): String
+}
+class User {
+    +id: number
+    +name: string
+    +password: string
+    +email: string
+    +isAdmin: boolean
+    +isBanned: boolean
+}
+class BillingAccount {
+    +id: number
+    +ownerId: number
+    +creditCardNumber: string
+    +name: string
+    +password: string
+    +money: number
+    +isBanned: boolean
+}
+class HttpService {
+    +usersUrl: "assets/users.json"
+    +subscriptionsUrl: "assets/subscriptions.json"
+    +billingAccountsUrl: "assets/billing_accounts.json"
+    -http: HttpClient
+    +getSubscriptions(): Observable<any>
+    +getSubscriptionsByFilter(name: string): Observable<any>
+    +postToUsers(user: User): Observable<any>
+    +postToBillingAccounts(billingAccount: BillingAccount): Observable<any>
+    +getUsers(): Observable<User[]>
+    +{static} httpOptions: { headers: HttpHeaders; }
+}
+class SubscriptionsShareService {
+    -subscriptions: BehaviorSubject<any[]>
+    +data$: Observable<any>
+    -http: HttpService
+    +getSubscriptions(): any[]
+    +setSubscriptions(subscriptions: ProductOffering[]): void
+}
+class UserService {
+    -http: HttpClient
+    +getAllUsers(): Observable<any>
+    +getUser(login: string, password: string): Observable<any>
+    +getUserById(id: number): Observable<User>
+    +createUser(user: User, activeBillingAccountId: number): Observable<User>
+    +ban(user: User): Observable<User>
+    +unBan(user: User): Observable<User>
+    +changeActiveBillingAccount(user: User, billingAccountId: number): Observable<User>
+    +getSubscriptionsQuantity(id: number): Observable<number>
+}
+class UserIDService {
+    -loggedUserID: BehaviorSubject<any[]>
+    +data$: Observable<any>
+    -userService: UserService
+    +getID(): any[]
+    +setID(id: number): void
+}
+class ProductsListComponent implements OnInit {
+    +subscriptions: ProductOffering[]
+    -subscriptionShareService: SubscriptionsShareService
+    -userIdService: UserIDService
+    -userService: UserService
+    +ngOnInit(): void
+}
+class SubscriptionService {
+    -http: HttpClient
+    +getSubscriptions(): Observable<ProductOffering[]>
+    +getSubscriptionById(id: number): Observable<ProductOffering>
+    +getSubscriptionByName(name: string): Observable<ProductOffering>
+    +getSubscriptionByCategory(category: string): Observable<ProductOffering[]>
+    +saveSubscription(subscription: ProductOffering): Observable<ProductOffering>
+    +banSubscription(id: number): Observable<ProductOffering>
+    +unBanSubscription(id: number): Observable<ProductOffering>
+}
+class ProductInstance {
+    +id: number
+    +userId: number
+    +productOffering: ProductOffering
+    +status: boolean
+}
+class SubscriptionUnitService {
+    -http: HttpClient
+    +getSubscriptionUnitsById(id: number): Observable<ProductInstance[]>
+    +saveSubscriptionUnit(subscriptionUnit: ProductInstance): Observable<ProductInstance>
+    +saveSubscriptionUnits(subscriptionUnit: ProductInstance[]): Observable<ProductInstance>
+    +deleteSubscriptionUnit(subscriptionUnit: ProductInstance): Observable<Object>
+    +changeStatusSubscriptionUnit(subscriptionUnit: ProductInstance): Observable<ProductInstance>
+}
+class ProductDetailsComponent implements OnInit {
+    +productOffering: ProductOffering
+    +isSubscribed: boolean
+    +notEnoughMoney: boolean
+    +id: any
+    +user: User
+    +subscriptionId: any
+    -http: SubscriptionService
+    -route: ActivatedRoute
+    -userIdService: UserIDService
+    -productInstanceService: SubscriptionUnitService
+    -userService: UserService
+    +ngOnInit(): void
+    +refreshData(): void
+    +ban(): void
+    +unBan(): void
+    +getSubscription(): void
+    +buyQuantity(quantity: any): void
+    +buy(quantity: number): void
+    +unsubscribe(): void
+}
+class LoginComponent {
+    +usersList: User[]
+    -user: User
+    +wrongData: boolean
+    -http: UserService
+    -userIDService: UserIDService
+    -router: Router
+    +signIn(login: string, password: string): void
+}
+class BillingAccountService {
+    -http: HttpClient
+    +getBillingAccountsByOwnerId(id: number): Observable<BillingAccount[]>
+    +createBillingAccount(billingAccount: BillingAccount): Observable<BillingAccount>
+    +deleteBillingAccount(billingAccount: BillingAccount): Observable<Object>
+    +addMoney(billingAccount: BillingAccount): Observable<BillingAccount>
+    +ban(billingAccount: BillingAccount): Observable<BillingAccount>
+    +unBan(billingAccount: BillingAccount): Observable<BillingAccount>
+}
+class RegistrationComponent {
+    +user: User
+    +billingAccount: BillingAccount
+    +wrongData: boolean
+    -userHttp: UserService
+    -billingHttp: BillingAccountService
+    -userIdService: UserIDService
+    -router: Router
+    +createUser(login: string, password: string, passwordRepeated: string, email: string): void
+    +createBillingAccount(creditCardNumber: string, billingAccountName: string, billingAccountPassword: string, billingAccountPasswordRepeated: string): void
+    +createAccount(login: string, password: string, passwordRepeated: string, email: string, creditCardNumber: string, billingAccountName: string, billingAccountPassword: string, billingAccountPasswordRepeated: string): void
+}
+class CreateBillingAccountComponent {
+    +id: any
+    +wrongData: boolean
+    -userIdService: UserIDService
+    -http: BillingAccountService
+    -router: Router
+    +createBillingAccount(name: string, creditCardNumber: string, password: string, passwordRepeated: string): void
+}
+class ProfileDetailsComponent
+class ManageBillingAccountComponent implements OnInit {
+    -billingAccounts: BillingAccount[]
+    +id: any
+    +wrongData: boolean
+    -http: BillingAccountService
+    -userIdService: UserIDService
+    -userService: UserService
+    -router: Router
+    +ngOnInit(): void
+    +deleteBillingAccount(billingAccountId: number, password: string): void
+    +addMoney(name: string, password: string, creditCardNumber: string, sum: string): void
+    +changeActiveBillingAccount(billingAccount: BillingAccount): void
+}
+class AdminAccountComponent implements OnInit {
+    +users: User[]
+    +quantities: number[]
+    +interval: any
+    -userService: UserService
+    -userIdService: UserIDService
+    +ngOnInit(): void
+    +unBan(user: User): void
+    +ban(user: User): void
+    +refreshData(): void
+    +getUserSubscriptionCount(): void
+}
+enum Categories {
+    development
+    music
+    films
+    office
+    streaming
+}
+class CreateSubscriptionComponent {
+    +cat: typeof Categories
+    -productOfferingService: SubscriptionService
+    -subscriptionsShareService: SubscriptionsShareService
+    +categoriesValues(): string[]
+    +createSubscription(name: string, description: string, category: number, price: string): void
+}
+class AppRoutingModule
+class AppComponent implements OnInit {
+    +title: string
+    +subscriptions: any
+    +ngOnInit(): void
+    -http: HttpService
+}
+class HeaderComponent implements OnInit {
+    +loggedUserIDObs: Observable<any>
+    +loggedUserID: any
+    +subscriptions: ProductOffering[]
+    +subscription: ProductOffering
+    +isAdmin: boolean
+    -http: SubscriptionService
+    +userIDService: UserIDService
+    -subscriptionShareService: SubscriptionsShareService
+    -userService: UserService
+    +ngOnInit(): void
+    +getIsAdmin(): void
+    +getAllSubscriptions(): void
+    +search(name: string): ProductOffering
+    +filter(category: string): ProductOffering[]
+    +logOut(): void
+}
+class UserSubscriptionsComponent implements OnInit {
+    +productInstances: ProductInstance[]
+    -observedId: any
+    -id: any
+    +user: User
+    -observedUser: User
+    +interval: any
+    -http: SubscriptionUnitService
+    -userIdService: UserIDService
+    +userService: UserService
+    -route: ActivatedRoute
+    +ngOnInit(): void
+    +refreshData(): void
+    +getSubscriptionUnitsById(): void
+    +unsubscribe(subscriptionUnit: ProductInstance): void
+    +changeStatus(subscriptionUnit: ProductInstance): void
+}
+class UserBillingAccountsComponent implements OnInit {
+    +billingAccounts: BillingAccount[]
+    -displayId: any
+    -id: any
+    +user: User
+    -observedUser: User
+    +interval: any
+    -http: BillingAccountService
+    -userIdService: UserIDService
+    -userService: UserService
+    -route: ActivatedRoute
+    +ngOnInit(): void
+    +refreshData(): void
+    +ban(billingAccount: BillingAccount): void
+    +unBan(billingAccount: BillingAccount): void
+}
+class SubscriptionsModule
+class AppModule
+@enduml

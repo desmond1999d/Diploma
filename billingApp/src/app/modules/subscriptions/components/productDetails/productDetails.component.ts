@@ -11,11 +11,11 @@ import {User} from "../../../../shared/User";
 
 @Component({
   selector: 'subscriptionsDetails',
-  templateUrl: './subscriptionDetails.component.html',
-  styleUrls: ['./subscriptionDetails.component.css']
+  templateUrl: './productDetails.component.html',
+  styleUrls: ['./productDetails.component.css']
 })
 
-export class SubscriptionDetailsComponent implements OnInit {
+export class ProductDetailsComponent implements OnInit {
   productOffering: ProductOffering;
   isSubscribed: boolean;
   notEnoughMoney: boolean;

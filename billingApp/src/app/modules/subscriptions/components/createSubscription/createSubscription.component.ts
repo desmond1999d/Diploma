@@ -24,7 +24,7 @@ export class CreateSubscriptionComponent {
   }
 
   createSubscription(name: string, description: string, category: number, price: string) {
-    let subscription: ProductOffering = new ProductOffering(null, name, description, Number(category), Number(price), false);
+    let subscription: ProductOffering = new ProductOffering(null, name, description, Number(category), Number(price), null,false);
     this.subscriptionService.saveSubscription(subscription).subscribe();
     this.subscriptionService.getSubscriptions().subscribe(
       subscriptions => {

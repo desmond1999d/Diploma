@@ -9,7 +9,7 @@ export class ProductOffering {
   public params: Array<OfferParam>;
   public isBanned: boolean;
 
-  constructor(id: number, name: String, description: String, category: number, price: number, params: Array, isBanned: boolean) {
+  constructor(id: number, name: String, description: String, category: number, price: number, params: Array<OfferParam>, isBanned: boolean) {
     this.id = id;
     this.name = name;
     this.description = description;

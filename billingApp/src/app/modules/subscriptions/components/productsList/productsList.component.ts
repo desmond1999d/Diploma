@@ -5,12 +5,12 @@ import {UserIDService} from "../../../../services/userID.service";
 import {UserService} from "../../../../services/user/user.service";
 
 @Component({
-  selector: 'subscriptionsList',
-  templateUrl: './subscriptionsList.component.html',
-  styleUrls: ['./subscriptionsList.component.css']
+  selector: 'productsList',
+  templateUrl: './productsList.component.html',
+  styleUrls: ['./productsList.component.css']
 })
 
-export class SubscriptionsListComponent implements OnInit {
+export class ProductsListComponent implements OnInit {
 
   subscriptions: ProductOffering[];
 

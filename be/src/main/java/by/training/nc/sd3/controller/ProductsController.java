@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/subscriptions")
+@RequestMapping("api/products")
 public class SubscriptionController {
 
     private ProductOfferingService productOfferingService;
@@ -18,7 +18,7 @@ public class SubscriptionController {
 
     @RequestMapping(value = "")
     public Iterable<ProductOffering> getAllSubscriptions() {
-        return productOfferingService.getSubscriptions();
+        return productOfferingService.getProductOfferings();
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
@@ -28,12 +28,12 @@ public class SubscriptionController {
 
     @RequestMapping(value = "/by-category", method = RequestMethod.GET)
     public Iterable<ProductOffering> getSubscriptionsByCategory(@RequestParam Long category) {
-        return productOfferingService.getSubscriptionsByCategory(category);
+        return productOfferingService.getProductOfferingsByCategory(category);
     }
 
     @RequestMapping(value = "/by-name", method = RequestMethod.GET)
     public ProductOffering getSubscriptionsByName(@RequestParam String name) {
-        return productOfferingService.getSubscriptionsByName(name);
+        return productOfferingService.getProductOfferingByName(name);
     }
 
     @PostMapping(value = "/save")

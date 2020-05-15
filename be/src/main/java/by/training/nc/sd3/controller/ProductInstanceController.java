@@ -28,7 +28,7 @@ public class SubscriptionUnitController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public Iterable<ProductInstance> getAll() {
-        return productInstanceService.getSubscriptionUnits();
+        return productInstanceService.getProductInstances();
     }
 
     @RequestMapping(value = "/post", method = RequestMethod.POST)
