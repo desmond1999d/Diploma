@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {SubscriptionService} from "../../../../services/subscription/subscription.service";
-import {toNumber} from "ngx-bootstrap/timepicker/timepicker.utils";
 import {ProductOffering} from "../../../../shared/ProductOffering";
 import {UserIDService} from "../../../../services/userID.service";
 import {SubscriptionUnitService} from "../../../../services/subscriptionUnit/subscriptionUnit.service";
@@ -16,7 +15,6 @@ import {User} from "../../../../shared/User";
 })
 
 export class ProductDetailsComponent implements OnInit {
-  BrowserAnimationsModule;
   productOffering: ProductOffering;
   isSubscribed: boolean;
   notEnoughMoney: boolean;
@@ -62,26 +60,26 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   ban() {
-    this.http.banSubscription(toNumber(this.subscriptionId)).subscribe(
+    this.http.banSubscription((this.subscriptionId)).subscribe(
       subscription => this.productOffering = subscription
     );
   }
 
   unBan() {
-    this.http.unBanSubscription(toNumber(this.subscriptionId)).subscribe(
+    this.http.unBanSubscription((this.subscriptionId)).subscribe(
       subscription => this.productOffering = subscription
     );
   }
 
   getSubscription() {
     this.subscriptionId = this.route.snapshot.paramMap.get('id');
-    this.http.getSubscriptionById(toNumber(this.subscriptionId)).subscribe(subscription => {
+    this.http.getSubscriptionById((this.subscriptionId)).subscribe(subscription => {
       this.productOffering = subscription;
     });
   }
 
   buyQuantity(quantity) {
-    this.buy(toNumber(quantity));
+    this.buy((quantity));
   }
 
   buy(quantity: number) {

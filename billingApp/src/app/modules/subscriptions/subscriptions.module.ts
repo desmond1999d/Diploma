@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ProductsListComponent} from './components/productsList/productsList.component';
-import {ButtonsModule} from 'ngx-bootstrap';
+import {ButtonsModule} from 'ngx-bootstrap/buttons';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {HeaderComponent} from './components/header/header.component';
 import {RouterModule} from '@angular/router';
@@ -16,7 +16,7 @@ import {AdminAccountComponent} from './components/adminAccount/adminAccount.comp
 import {ManageBillingAccountComponent} from './components/manageBillingAccount/manageBillingAccount.component';
 import {CreateSubscriptionComponent} from "./components/createSubscription/createSubscription.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CollapseModule } from 'ngx-bootstrap';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({

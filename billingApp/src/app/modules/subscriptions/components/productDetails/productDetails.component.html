@@ -3,30 +3,47 @@
 
     <div class="col"></div>
 
-    <div class="col-10">
-      <ul class="list-group">
-        <li class="list-group-item">
+    <div class="col-10 container">
+      <div class="row">
+
+        <div class="col" align="center">
+          <div class="w-75 h-100">
+            <carousel [isAnimated]="true" class="m-1 align-middle">
+              <div *ngFor="let param of productOffering.params">
+                <slide *ngIf="param.image">
+                  <img src={{param.value}} alt="first slide" style="display: block; width: 100%">
+                </slide>
+              </div>
+            </carousel>
+          </div>
+        </div>
+
+        <div class="col" align="center">
           <h1>{{productOffering.name}}</h1>
 
-          <carousel [isAnimated]="true">
-            <slide>
-              <img src="assets/images/nature/1.jpg" alt="first slide" style="display: block; width: 100%;">
-            </slide>
-            <slide>
-              <img src="assets/images/nature/2.jpg" alt="second slide" style="display: block; width: 100%;">
-            </slide>
-            <slide>
-              <img src="assets/images/nature/3.jpg" alt="third slide" style="display: block; width: 100%;">
-            </slide>
-          </carousel>
-
           <!--<img src="../../../../../assets/icons/no_image.png" class="product-image">-->
-          <p class="form-row align-items-center">{{productOffering.description}}</p>
-          <label class="font-weight-bold">Product offering params</label>
-          <p class="form-row align-items-center" *ngFor="let detail of productOffering.params">{{detail.name + ': ' + detail.value}}</p>
-          <div class="form-row align-items-center">
-            <p>Price: </p>
-            <p class="ml-3">{{productOffering.price + '$'}}</p>
+          <p class="form-row text-justify">{{productOffering.description}}</p>
+
+          <table class="table table-hover table-responsive-sm w-auto">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let detail of productOffering.params; let i = index">
+              <th scope="row">{{i}}</th>
+              <td>{{detail.name}}</td>
+              <td>{{detail.value}}</td>
+            </tr>
+            </tbody>
+          </table>
+
+          <div class="row">
+            <p class="font-weight-bold">Price: </p>
+            <p class="ml-3 price font-weight-bold">{{'$' + productOffering.price}}</p>
           </div>
           <div class="form-row align-items-center" *ngIf="id > -1">
             <label for="productQuantity">Quantity: </label>
@@ -64,8 +81,8 @@
             </div>
           </div>
           <p *ngIf="notEnoughMoney" class="text-danger">Failed, please check your billing account settings.</p>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
 
     <div class="col"></div>

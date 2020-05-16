@@ -25,12 +25,11 @@
   <!--</div>-->
 <!--</div>-->
 
-<table class="table table-borderless">
   <ng-container
     *ngFor="let productOffering of subscriptions | paginate: { itemsPerPage: 4, currentPage: page } ; let i = index">
-    <tr *ngIf="i % 4 == 0">
+    <div class="row justify-content-around" *ngIf="i % 4 == 0">
       <ng-container *ngFor="let productOffering of subscriptions; let j = index">
-        <td *ngIf="j >= i && j < i+4">
+        <div class="col m-3" align="center" *ngIf="j >= i && j < i+4">
           <div class="product-grid">
             <div class="product-image">
               <a href="#">
@@ -40,25 +39,17 @@
               <span class="product-new-label">Sale</span>
               <span class="product-discount-label">20%</span>
             </div>
-            <ul class="rating">
-              <li class="fa fa-star"></li>
-              <li class="fa fa-star"></li>
-              <li class="fa fa-star"></li>
-              <li class="fa fa-star"></li>
-              <li class="fa fa-star disable"></li>
-            </ul>
             <div class="product-content">
               <h3 class="title"><a routerLink="/details/{{productOffering.id}}">{{productOffering.name}}</a></h3>
-              <div class="price">$16.00
+              <div class="price">{{'$' + productOffering.price}}
               </div>
               <a class="add-to-cart" href="">+ Add To Cart</a>
             </div>
           </div>
-        </td>
+        </div>
       </ng-container>
-    </tr>
+    </div>
   </ng-container>
-</table>
 
 <div class="text-center mt-3">
   <div class="has-text-centered">

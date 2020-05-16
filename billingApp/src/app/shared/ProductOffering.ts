@@ -36,6 +36,6 @@ export class ProductOffering {
   }
 
   public getImages(): OfferParam[] {
-    return this.params.filter(param => param.isImage());
+    return this.params.filter(param => param.image);
   }
 }

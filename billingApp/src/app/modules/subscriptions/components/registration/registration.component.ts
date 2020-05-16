@@ -5,7 +5,6 @@ import {UserService} from "../../../../services/user/user.service";
 import {BillingAccountService} from "../../../../services/billingAccount/billingAccount.service";
 import {UserIDService} from "../../../../services/userID.service";
 import {Router} from "@angular/router";
-import {Log} from "@angular/core/testing/src/logger";
 
 @Component({
   selector: 'registration',
