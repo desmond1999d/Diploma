@@ -34,4 +34,8 @@ export class ProductOffering {
   getDescription() {
     return this.description;
   }
+
+  public getImages(): OfferParam[] {
+    return this.params.filter(param => param.isImage());
+  }
 }

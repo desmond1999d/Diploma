@@ -13,4 +13,6 @@ public interface UserAccountRepository extends CrudRepository<UserAccount, Long>
 
     Optional<UserAccount> findByNameAndPassword(@Param("name") String name, @Param("password") String password);
 
+    Optional<UserAccount> findByName(String name);
+
 }

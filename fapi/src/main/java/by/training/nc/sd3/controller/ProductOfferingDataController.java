@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/subs")
+@RequestMapping("/api/catalog")
 public class ProductOfferingDataController {
 
     @Autowired
@@ -22,17 +22,17 @@ public class ProductOfferingDataController {
 
     @RequestMapping(value = "/get-by-id", method = RequestMethod.GET)
     public ResponseEntity<ProductOfferingViewModel> getSubscriptionById(@RequestParam String id) {
-        return ResponseEntity.ok(productOfferingDataService.getSubscriptionById(Long.valueOf(id)));
+        return ResponseEntity.ok(productOfferingDataService.getProductOfferingById(Long.valueOf(id)));
     }
 
     @RequestMapping(value = "/get-by-name", method = RequestMethod.GET)
     public ResponseEntity<ProductOfferingViewModel> getSubscriptionByName(@RequestParam String name) {
-        return ResponseEntity.ok(productOfferingDataService.getSubscriptionByName(name));
+        return ResponseEntity.ok(productOfferingDataService.getProductOfferingByName(name));
     }
 
     @RequestMapping(value = "/get-by-category", method = RequestMethod.GET)
     public ResponseEntity<List<ProductOfferingViewModel>> getSubscriptionByCategory(@RequestParam String category) {
-        return ResponseEntity.ok(productOfferingDataService.getSubscriptionByCategory(category));
+        return ResponseEntity.ok(productOfferingDataService.getProductOfferingByCategory(category));
     }
 
     @PostMapping(value = "/save")

@@ -7,10 +7,10 @@ import java.util.Optional;
 
 public interface ProductOfferingService {
 
-    Iterable<ProductOffering> getSubscriptions();
+    Iterable<ProductOffering> getProductOfferings();
     Optional<ProductOffering> getSubscriptionById(Long id);
-    Iterable<ProductOffering> getSubscriptionsByCategory(Long category);
-    ProductOffering getSubscriptionsByName(String name);
+    Iterable<ProductOffering> getProductOfferingsByCategory(Long category);
+    ProductOffering getProductOfferingByName(String name);
     ProductOffering save(ProductOffering productOffering);
     ProductOffering ban(Long id);
     ProductOffering unBan(Long id);

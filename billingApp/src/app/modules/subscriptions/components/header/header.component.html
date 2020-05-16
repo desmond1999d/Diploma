@@ -29,7 +29,7 @@
         <a class="nav-link" routerLink="/createSubscription">Create</a>
       </li>
     </ul>
-    <div class="d-inline-flex">
+    <div class="form-inline">
       <input #searchRequest class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button type="button" routerLink="/subscriptions" (click)="search(searchRequest.value); searchRequest.value=''"
               class="btn btn-outline-success my-2 my-sm-0">Search

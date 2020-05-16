@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface ProductOfferingDataService {
     List<ProductOfferingViewModel> getAll();
-    ProductOfferingViewModel getSubscriptionById(Long id);
-    List<ProductOfferingViewModel> getSubscriptionByCategory(String category);
-    ProductOfferingViewModel getSubscriptionByName(String name);
+    ProductOfferingViewModel getProductOfferingById(Long id);
+    List<ProductOfferingViewModel> getProductOfferingByCategory(String category);
+    ProductOfferingViewModel getProductOfferingByName(String name);
     ProductOfferingViewModel save(ProductOfferingViewModel productOfferingViewModel);
     ProductOfferingViewModel ban(Long id);
     ProductOfferingViewModel unBan(Long id);

@@ -7,7 +7,20 @@
       <ul class="list-group">
         <li class="list-group-item">
           <h1>{{productOffering.name}}</h1>
-          <img src="../../../../../assets/icons/no_image.png" class="product-image">
+
+          <carousel [isAnimated]="true">
+            <slide>
+              <img src="assets/images/nature/1.jpg" alt="first slide" style="display: block; width: 100%;">
+            </slide>
+            <slide>
+              <img src="assets/images/nature/2.jpg" alt="second slide" style="display: block; width: 100%;">
+            </slide>
+            <slide>
+              <img src="assets/images/nature/3.jpg" alt="third slide" style="display: block; width: 100%;">
+            </slide>
+          </carousel>
+
+          <!--<img src="../../../../../assets/icons/no_image.png" class="product-image">-->
           <p class="form-row align-items-center">{{productOffering.description}}</p>
           <label class="font-weight-bold">Product offering params</label>
           <p class="form-row align-items-center" *ngFor="let detail of productOffering.params">{{detail.name + ': ' + detail.value}}</p>

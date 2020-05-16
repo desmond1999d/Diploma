@@ -3,6 +3,8 @@ package by.training.nc.sd3.service.impl;
 import by.training.nc.sd3.models.UserAccountViewModel;
 import by.training.nc.sd3.service.UserAccountDataService;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -64,5 +66,12 @@ public class UserAccountDataServiceImpl implements UserAccountDataService {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(backendServerUrl + "/api/user-accounts//subscription-unit/quantity?id={id}",
                 Integer.class, id);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject(backendServerUrl + "/api/user-accounts/by-name?name={name}}",
+                UserAccountViewModel.class, name);
     }
 }

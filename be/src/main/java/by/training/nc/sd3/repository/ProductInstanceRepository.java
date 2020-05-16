@@ -18,5 +18,5 @@ public interface ProductInstanceRepository extends CrudRepository<ProductInstanc
     <S extends ProductInstance> Iterable<S> saveAll(Iterable<S> iterable);
 
     @Override
-    void deleteById(Long aLong);
+    void deleteById(Long id);
 }

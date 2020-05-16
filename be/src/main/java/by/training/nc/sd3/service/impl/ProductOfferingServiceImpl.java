@@ -5,12 +5,13 @@ import by.training.nc.sd3.repository.ProductOfferingRepository;
 import by.training.nc.sd3.service.ProductOfferingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReference;
 
-@Component
+@Service
 public class ProductOfferingServiceImpl implements ProductOfferingService {
 
     private ProductOfferingRepository productOfferingRepository;
@@ -20,7 +21,7 @@ public class ProductOfferingServiceImpl implements ProductOfferingService {
         this.productOfferingRepository = productOfferingRepository;
     }
 
-    public Iterable<ProductOffering> getSubscriptions() {
+    public Iterable<ProductOffering> getProductOfferings() {
         return productOfferingRepository.findAll();
     }
 
@@ -28,28 +29,12 @@ public class ProductOfferingServiceImpl implements ProductOfferingService {
         return productOfferingRepository.findById(id);
     }
 
-    public Iterable<ProductOffering> getSubscriptionsByCategory(Long category) {
-        Iterable<ProductOffering> subscriptions = getSubscriptions();
-        Iterable<ProductOffering> responseSubscriptions = new LinkedList<>();
-        subscriptions.forEach(
-                subscription -> {
-                    if(subscription.getCategory() == category)
-                        ((LinkedList<ProductOffering>) responseSubscriptions).add(subscription);
-                }
-        );
-        return responseSubscriptions;
+    public Iterable<ProductOffering> getProductOfferingsByCategory(Long category) {
+        return productOfferingRepository.getByCategory(category.intValue());
     }
 
-    public ProductOffering getSubscriptionsByName(String name) {
-        Iterable<ProductOffering> subscriptions = getSubscriptions();
-        AtomicReference<ProductOffering> responseSubscription = new AtomicReference<>();
-        subscriptions.forEach(
-                subscription -> {
-                    if(subscription.getName().equals(name))
-                        responseSubscription.set(subscription);
-                }
-        );
-        return responseSubscription.get();
+    public ProductOffering getProductOfferingByName(String name) {
+        return productOfferingRepository.getByName(name);
     }
 
     @Override

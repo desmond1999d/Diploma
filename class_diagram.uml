@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="4353.4735634920635" y="1787.0">by.training.nc.sd3.service.UserAccountService</node>
+    <node x="4148.608369047619" y="2209.0">by.training.nc.sd3.controller.ProductInstanceController</node>
+    <node x="485.39583333333303" y="1786.0">by.training.nc.sd3.controller.ProductsController</node>
+    <node x="886.3749999999999" y="3983.0">by.training.nc.sd3.controller.ProductOfferingDataController</node>
+    <node x="2677.835944444446" y="2176.0">by.training.nc.sd3.service.impl.UserAccountServiceImpl</node>
+    <node x="2072.8800396825395" y="4049.5">by.training.nc.sd3.service.StatisticsEntryDataService</node>
+    <node x="575.0" y="4240.0">by.training.nc.sd3.service.impl.ProductInstanceDataServiceImpl</node>
+    <node x="1331.477575396826" y="2275.0">by.training.nc.sd3.service.impl.StatisticsServiceImpl</node>
+    <node x="2288.8800396825395" y="4273.0">by.training.nc.sd3.controller.StatisticsEntryDataController</node>
+    <node x="569.0" y="5314.0">by.training.nc.sd3.service.impl.BillingAccountDataServiceImpl</node>
+    <node x="3812.0026111111124" y="1787.0">by.training.nc.sd3.service.ProductInstanceService</node>
+    <node x="1279.0" y="4448.0">by.training.nc.sd3.security.JwtAuthenticationEntryPoint</node>
+    <node x="1138.644325396826" y="1226.0">by.training.nc.sd3.entity.StatisticsEntry</node>
+    <node x="1147.1041666666665" y="3638.0">by.training.nc.sd3.service.ProductOfferingDataService</node>
+    <node x="366.39583333333303" y="1337.0">by.training.nc.sd3.service.ProductOfferingService</node>
+    <node x="4160.092160894661" y="2539.0">by.training.nc.sd3.security.SecurityJwtConstants</node>
+    <node x="3898.773979076479" y="2884.0">by.training.nc.sd3.security.TokenProvider</node>
+    <node x="1839.8800396825395" y="2650.0">by.training.nc.sd3.models.Categories</node>
+    <node x="4779.7235634920635" y="1798.0">by.training.nc.sd3.service.BillingAccountService</node>
+    <node x="4096.38003968254" y="3349.5">by.training.nc.sd3.security.JwtAuthenticationFilter</node>
+    <node x="3360.4693253968258" y="1204.0">by.training.nc.sd3.entity.UserAccount</node>
+    <node x="3359.80806998557" y="2729.0">by.training.nc.sd3.models.UserAccountViewModel</node>
+    <node x="4745.846309523809" y="2198.0">by.training.nc.sd3.controller.UserAccountController</node>
+    <node x="1105.5467063492065" y="2951.0">by.training.nc.sd3.models.ProductOfferingViewModel</node>
+    <node x="3220.3402777777774" y="522.0">by.training.nc.sd3.entity.BillingAccount</node>
+    <node x="2321.469325396826" y="1864.0">by.training.nc.sd3.repository.UserAccountRepository</node>
+    <node x="1824.8026111111121" y="1182.0">by.training.nc.sd3.entity.ProductInstance</node>
+    <node x="799.895833333333" y="2275.0">by.training.nc.sd3.controller.StatisticsController</node>
+    <node x="1003.4999999999998" y="0.0">by.training.nc.sd3.entity.OfferParam</node>
+    <node x="318.25" y="4016.5">by.training.nc.sd3.service.ProductInstanceDataService</node>
+    <node x="877.4999999999998" y="111.0">by.training.nc.sd3.entity.Categories</node>
+    <node x="4055.43306998557" y="3595.0">by.training.nc.sd3.security.WebSecurityConfig</node>
+    <node x="1147.0467063492063" y="2539.0">by.training.nc.sd3.models.OfferParamViewModel</node>
+    <node x="1864.5651111111122" y="2176.0">by.training.nc.sd3.service.impl.ProductInstanceServiceImpl</node>
+    <node x="901.3958333333333" y="1864.0">by.training.nc.sd3.service.StatisticsService</node>
+    <node x="3495.8800396825395" y="3551.0">by.training.nc.sd3.service.impl.UserAccountDataServiceImpl</node>
+    <node x="280.564603174603" y="3549.0">by.training.nc.sd3.models.ProductInstanceViewModel</node>
+    <node x="0.0" y="1392.0">by.training.nc.sd3.repository.ProductOfferingRepository</node>
+    <node x="46.85257539682607" y="1786.0">by.training.nc.sd3.service.impl.ProductOfferingServiceImpl</node>
+    <node x="1947.2083333333333" y="3527.0">by.training.nc.sd3.models.StatisticsEntryViewModel</node>
+    <node x="3552.875992063492" y="2198.0">by.training.nc.sd3.service.impl.BillingAccountServiceImpl</node>
+    <node x="2755.469325396826" y="1864.0">by.training.nc.sd3.repository.BillingAccountRepository</node>
+    <node x="845.9999999999998" y="412.0">by.training.nc.sd3.entity.ProductOffering</node>
+    <node x="1834.1300396825395" y="4273.0">by.training.nc.sd3.service.impl.StatisticsEntryDataServiceImpl</node>
+    <node x="3322.80806998557" y="3295.0">by.training.nc.sd3.service.UserAccountDataService</node>
+    <node x="1312.3958333333333" y="1864.0">by.training.nc.sd3.repository.StatisticsEntryRepository</node>
+    <node x="320.5" y="5058.0">by.training.nc.sd3.service.BillingAccountDataService</node>
+    <node x="1067.0" y="4448.0">by.training.nc.sd3.BackendApplication</node>
+    <node x="2864.8800396825395" y="3551.0">by.training.nc.sd3.controller.UserAccountDataController</node>
+    <node x="0.0" y="5314.0">by.training.nc.sd3.controller.BillingAccountDataController</node>
+    <node x="5143.846309523809" y="2209.0">by.training.nc.sd3.controller.BillingAccountController</node>
+    <node x="319.5" y="4448.0">by.training.nc.sd3.models.BillingAccountViewModel</node>
+    <node x="1844.469325396826" y="1831.0">by.training.nc.sd3.repository.ProductInstanceRepository</node>
+    <node x="0.0" y="4240.0">by.training.nc.sd3.controller.ProductInstanceDataController</node>
+    <node x="1434.375" y="3983.0">by.training.nc.sd3.service.impl.ProductOfferingDataServiceImpl</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="by.training.nc.sd3.service.StatisticsEntryDataService" target="by.training.nc.sd3.models.Categories">
+      <point x="107.25" y="-37.0" />
+      <point x="2394.6300396825395" y="3963.0" />
+      <point x="2462.708333333333" y="3963.0" />
+      <point x="2462.708333333333" y="2931.0" />
+      <point x="1914.0800396825398" y="2931.0" />
+      <point x="21.200000000000045" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductInstanceDataController" target="by.training.nc.sd3.models.ProductInstanceViewModel">
+      <point x="-138.75" y="-81.5" />
+      <point x="138.75" y="4215.0" />
+      <point x="213.125" y="4215.0" />
+      <point x="213.125" y="3963.0" />
+      <point x="372.564603174603" y="3963.0" />
+      <point x="-184.0" y="181.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductInstanceController" target="by.training.nc.sd3.entity.UserAccount">
+      <point x="-63.55555555555543" y="-126.0" />
+      <point x="4371.052813492064" y="2086.0" />
+      <point x="4216.502611111113" y="2086.0" />
+      <point x="4216.502611111113" y="1716.0" />
+      <point x="3583.3026587301592" y="1716.0" />
+      <point x="31.833333333333258" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.UserAccountController" target="by.training.nc.sd3.entity.UserAccount">
+      <point x="126.0" y="-137.0" />
+      <point x="5060.846309523809" y="2156.0" />
+      <point x="5124.7172619047615" y="2156.0" />
+      <point x="5124.7172619047615" y="1696.0" />
+      <point x="3710.6359920634927" y="1696.0" />
+      <point x="159.16666666666674" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.models.ProductOfferingViewModel" target="by.training.nc.sd3.models.Categories">
+      <point x="191.0" y="-258.0" />
+      <point x="1583.0467063492065" y="2921.0" />
+      <point x="1850.4800396825397" y="2921.0" />
+      <point x="-42.39999999999998" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.StatisticsEntryDataController" target="by.training.nc.sd3.models.Categories">
+      <point x="176.9999999999999" y="-48.5" />
+      <point x="2731.3800396825395" y="4215.0" />
+      <point x="2581.1896031746032" y="4215.0" />
+      <point x="2581.1896031746032" y="2921.0" />
+      <point x="1935.2800396825396" y="2921.0" />
+      <point x="42.39999999999998" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.StatisticsEntryDataController" target="by.training.nc.sd3.models.StatisticsEntryViewModel">
+      <point x="0.0" y="-48.5" />
+      <point x="2554.3800396825395" y="4215.0" />
+      <point x="2570.1896031746032" y="4215.0" />
+      <point x="2570.1896031746032" y="3953.0" />
+      <point x="2368.0416666666665" y="3953.0" />
+      <point x="168.33333333333337" y="203.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductInstanceServiceImpl" target="by.training.nc.sd3.repository.UserAccountRepository">
+      <point x="31.84999999999991" y="-159.0" />
+      <point x="2214.9151111111123" y="2076.0" />
+      <point x="2373.219325396826" y="2076.0" />
+      <point x="-155.25" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.BillingAccountServiceImpl" target="by.training.nc.sd3.entity.ProductInstance">
+      <point x="-68.57142857142867" y="-137.0" />
+      <point x="3724.304563492063" y="2106.0" />
+      <point x="3671.7781706349215" y="2106.0" />
+      <point x="3671.7781706349215" y="1746.0" />
+      <point x="2097.302611111112" y="1746.0" />
+      <point x="0.0" y="247.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductInstanceController" target="by.training.nc.sd3.service.UserAccountService">
+      <point x="127.11111111111109" y="-126.0" />
+      <point x="4561.71948015873" y="2126.0" />
+      <point x="4551.9735634920635" y="2126.0" />
+      <point x="0.0" y="114.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductInstanceServiceImpl" target="by.training.nc.sd3.entity.ProductInstance">
+      <point x="-222.95000000000027" y="-159.0" />
+      <point x="1960.115111111112" y="2146.0" />
+      <point x="1720.290075396826" y="2146.0" />
+      <point x="1720.290075396826" y="1746.0" />
+      <point x="1879.3026111111121" y="1746.0" />
+      <point x="-218.0" y="247.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductOfferingDataServiceImpl" target="by.training.nc.sd3.models.ProductOfferingViewModel">
+      <point x="0.0" y="-103.5" />
+      <point x="1660.375" y="3963.0" />
+      <point x="1700.6062698412698" y="3963.0" />
+      <point x="1700.6062698412698" y="3507.0" />
+      <point x="1473.9038492063492" y="3507.0" />
+      <point x="81.85714285714289" y="258.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductOfferingServiceImpl" target="by.training.nc.sd3.service.ProductOfferingService">
+      <point x="155.625" y="-115.0" />
+      <point x="409.97757539682607" y="1766.0" />
+      <point x="435.5625" y="1766.0" />
+      <point x="-138.33333333333303" y="92.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.BillingAccountController" target="by.training.nc.sd3.service.BillingAccountService">
+      <point x="-109.0" y="-126.0" />
+      <point x="5198.346309523809" y="2146.0" />
+      <point x="5008.623563492064" y="2146.0" />
+      <point x="65.39999999999998" y="103.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.StatisticsEntryDataServiceImpl" target="by.training.nc.sd3.models.StatisticsEntryViewModel">
+      <point x="0.0" y="-48.5" />
+      <point x="2048.6300396825395" y="4215.0" />
+      <point x="1995.2550396825395" y="4215.0" />
+      <point x="1995.2550396825395" y="3963.0" />
+      <point x="2031.375" y="3963.0" />
+      <point x="-168.33333333333337" y="203.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.repository.ProductInstanceRepository" target="by.training.nc.sd3.entity.ProductInstance">
+      <point x="0.0" y="-70.0" />
+      <point x="2072.969325396826" y="1746.0" />
+      <point x="1988.3026111111121" y="1746.0" />
+      <point x="-109.0" y="247.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductOfferingDataController" target="by.training.nc.sd3.models.ProductOfferingViewModel">
+      <point x="-132.0" y="-103.5" />
+      <point x="1018.3749999999999" y="3963.0" />
+      <point x="1120.1687698412698" y="3963.0" />
+      <point x="1120.1687698412698" y="3507.0" />
+      <point x="1310.1895634920634" y="3507.0" />
+      <point x="-81.85714285714289" y="258.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.repository.BillingAccountRepository" target="by.training.nc.sd3.entity.BillingAccount">
+      <point x="0.0" y="-37.0" />
+      <point x="3047.469325396826" y="1152.0" />
+      <point x="3361.5069444444443" y="1152.0" />
+      <point x="-40.33333333333326" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductInstanceController" target="by.training.nc.sd3.service.ProductInstanceService">
+      <point x="-190.66666666666652" y="-126.0" />
+      <point x="4243.941702380953" y="2106.0" />
+      <point x="4156.702611111113" y="2106.0" />
+      <point x="153.20000000000005" y="114.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.StatisticsController" target="by.training.nc.sd3.entity.StatisticsEntry">
+      <point x="-129.33333333333348" y="-60.0" />
+      <point x="864.5624999999995" y="2156.0" />
+      <point x="890.8958333333333" y="2156.0" />
+      <point x="890.8958333333333" y="1756.0" />
+      <point x="1187.019325396826" y="1756.0" />
+      <point x="-145.125" y="203.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.BillingAccountDataServiceImpl" target="by.training.nc.sd3.service.BillingAccountDataService">
+      <point x="-113.25" y="-114.5" />
+      <point x="682.25" y="5289.0" />
+      <point x="660.25" y="5289.0" />
+      <point x="113.25" y="103.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductInstanceServiceImpl" target="by.training.nc.sd3.repository.BillingAccountRepository">
+      <point x="222.94999999999982" y="-159.0" />
+      <point x="2406.0151111111118" y="2106.0" />
+      <point x="2901.469325396826" y="2106.0" />
+      <point x="-146.0" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.security.WebSecurityConfig" target="by.training.nc.sd3.service.UserAccountDataService">
+      <point x="-120.33333333333348" y="-81.5" />
+      <point x="4115.599736652236" y="3521.0" />
+      <point x="3751.9747366522365" y="3521.0" />
+      <point x="171.66666666666652" y="103.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.security.WebSecurityConfig" target="by.training.nc.sd3.security.JwtAuthenticationFilter">
+      <point x="120.33333333333348" y="-81.5" />
+      <point x="4356.266403318903" y="3531.0" />
+      <point x="4441.380039682539" y="3531.0" />
+      <point x="115.0" y="48.5" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductOfferingDataServiceImpl" target="by.training.nc.sd3.service.ProductOfferingDataService">
+      <point x="-150.66666666666663" y="-103.5" />
+      <point x="1509.7083333333333" y="3963.0" />
+      <point x="1486.1041666666665" y="3963.0" />
+      <point x="113.0" y="92.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.StatisticsEntryDataServiceImpl" target="by.training.nc.sd3.models.Categories">
+      <point x="-143.0" y="-48.5" />
+      <point x="1905.6300396825395" y="4215.0" />
+      <point x="1896.875" y="4215.0" />
+      <point x="1896.875" y="2931.0" />
+      <point x="1892.8800396825395" y="2931.0" />
+      <point x="0.0" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.ProductInstanceDataService" target="by.training.nc.sd3.models.ProductInstanceViewModel">
+      <point x="0.0" y="-70.0" />
+      <point x="554.75" y="3963.0" />
+      <point x="556.564603174603" y="3963.0" />
+      <point x="0.0" y="181.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.StatisticsController" target="by.training.nc.sd3.service.StatisticsService">
+      <point x="129.33333333333348" y="-60.0" />
+      <point x="1123.2291666666665" y="2156.0" />
+      <point x="1096.8958333333333" y="2156.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.StatisticsEntryDataServiceImpl" target="by.training.nc.sd3.service.StatisticsEntryDataService">
+      <point x="143.0" y="-48.5" />
+      <point x="2191.6300396825395" y="4215.0" />
+      <point x="2180.1300396825395" y="4215.0" />
+      <point x="-107.25" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.repository.StatisticsEntryRepository" target="by.training.nc.sd3.entity.StatisticsEntry">
+      <point x="0.0" y="-37.0" />
+      <point x="1489.8958333333333" y="1766.0" />
+      <point x="1380.519325396826" y="1766.0" />
+      <point x="48.375" y="203.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductInstanceServiceImpl" target="by.training.nc.sd3.repository.ProductInstanceRepository">
+      <point x="-95.55000000000018" y="-159.0" />
+      <point x="2087.5151111111118" y="2126.0" />
+      <point x="1901.594325396826" y="2126.0" />
+      <point x="-171.375" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.UserAccountServiceImpl" target="by.training.nc.sd3.repository.UserAccountRepository">
+      <point x="-137.55555555555566" y="-159.0" />
+      <point x="2849.7803888888902" y="2046.0" />
+      <point x="2580.219325396826" y="2046.0" />
+      <point x="51.75" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.repository.UserAccountRepository" target="by.training.nc.sd3.entity.UserAccount">
+      <point x="0.0" y="-37.0" />
+      <point x="2528.469325396826" y="1766.0" />
+      <point x="3455.9693253968258" y="1766.0" />
+      <point x="-95.5" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.UserAccountServiceImpl" target="by.training.nc.sd3.service.UserAccountService">
+      <point x="275.1111111111113" y="-159.0" />
+      <point x="3262.447055555557" y="2126.0" />
+      <point x="4393.173563492064" y="2126.0" />
+      <point x="-158.79999999999995" y="114.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductOfferingDataServiceImpl" target="by.training.nc.sd3.models.Categories">
+      <point x="150.66666666666674" y="-103.5" />
+      <point x="1811.0416666666665" y="3963.0" />
+      <point x="1772.752103174603" y="3963.0" />
+      <point x="1772.752103174603" y="2931.0" />
+      <point x="1871.6800396825397" y="2931.0" />
+      <point x="-21.200000000000045" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.StatisticsEntryDataService" target="by.training.nc.sd3.models.StatisticsEntryViewModel">
+      <point x="-107.25" y="-37.0" />
+      <point x="2180.1300396825395" y="3963.0" />
+      <point x="2199.708333333333" y="3963.0" />
+      <point x="0.0" y="203.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductInstanceDataServiceImpl" target="by.training.nc.sd3.service.ProductInstanceDataService">
+      <point x="-118.25" y="-81.5" />
+      <point x="693.25" y="4215.0" />
+      <point x="673.0" y="4215.0" />
+      <point x="118.25" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductInstanceController" target="by.training.nc.sd3.entity.ProductInstance">
+      <point x="-127.11111111111109" y="-126.0" />
+      <point x="4307.4972579365085" y="2096.0" />
+      <point x="4205.502611111113" y="2096.0" />
+      <point x="4205.502611111113" y="1726.0" />
+      <point x="2315.302611111112" y="1726.0" />
+      <point x="218.0" y="247.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.entity.ProductInstance" target="by.training.nc.sd3.entity.ProductOffering">
+      <point x="-68.125" y="-247.0" />
+      <point x="2029.1776111111121" y="1102.0" />
+      <point x="1241.6249999999998" y="1102.0" />
+      <point x="184.625" y="335.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.entity.ProductOffering" target="by.training.nc.sd3.entity.OfferParam">
+      <point x="0.0" y="-335.0" />
+      <point x="1056.9999999999998" y="387.0" />
+      <point x="1063.4999999999998" y="387.0" />
+      <point x="-60.0" y="181.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.StatisticsServiceImpl" target="by.training.nc.sd3.repository.StatisticsEntryRepository">
+      <point x="-48.875" y="-60.0" />
+      <point x="1478.102575396826" y="2156.0" />
+      <point x="1401.1458333333333" y="2156.0" />
+      <point x="-88.75" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.UserAccountServiceImpl" target="by.training.nc.sd3.repository.BillingAccountRepository">
+      <point x="68.77777777777783" y="-159.0" />
+      <point x="3056.1137222222237" y="2106.0" />
+      <point x="3096.1359920634923" y="2106.0" />
+      <point x="48.666666666666515" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.entity.ProductOffering" target="by.training.nc.sd3.entity.Categories">
+      <point x="-140.66666666666697" y="-335.0" />
+      <point x="916.3333333333328" y="387.0" />
+      <point x="930.4999999999998" y="387.0" />
+      <point x="0.0" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.UserAccountServiceImpl" target="by.training.nc.sd3.entity.BillingAccount">
+      <point x="137.55555555555566" y="-159.0" />
+      <point x="3124.8915000000015" y="2096.0" />
+      <point x="3349.969325396826" y="2096.0" />
+      <point x="3349.969325396826" y="1162.0" />
+      <point x="3401.8402777777774" y="1162.0" />
+      <point x="0.0" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.UserAccountServiceImpl" target="by.training.nc.sd3.repository.ProductInstanceRepository">
+      <point x="-275.1111111111113" y="-159.0" />
+      <point x="2712.2248333333346" y="2066.0" />
+      <point x="2130.094325396826" y="2066.0" />
+      <point x="57.125" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.ProductOfferingDataService" target="by.training.nc.sd3.models.ProductOfferingViewModel">
+      <point x="0.0" y="-92.0" />
+      <point x="1373.1041666666665" y="3507.0" />
+      <point x="1392.0467063492065" y="3507.0" />
+      <point x="0.0" y="258.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductInstanceServiceImpl" target="by.training.nc.sd3.service.ProductInstanceService">
+      <point x="286.6500000000001" y="-159.0" />
+      <point x="2469.7151111111125" y="2116.0" />
+      <point x="3850.302611111112" y="2116.0" />
+      <point x="-153.20000000000005" y="114.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductOfferingServiceImpl" target="by.training.nc.sd3.repository.ProductOfferingRepository">
+      <point x="-155.625" y="-115.0" />
+      <point x="98.72757539682607" y="1766.0" />
+      <point x="77.75" y="1766.0" />
+      <point x="-77.75" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.UserAccountDataServiceImpl" target="by.training.nc.sd3.models.UserAccountViewModel">
+      <point x="128.75" y="-125.5" />
+      <point x="3882.1300396825395" y="3531.0" />
+      <point x="3892.6300396825395" y="3531.0" />
+      <point x="3892.6300396825395" y="3270.0" />
+      <point x="3727.30806998557" y="3270.0" />
+      <point x="147.0" y="258.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.BillingAccountDataServiceImpl" target="by.training.nc.sd3.models.BillingAccountViewModel">
+      <point x="113.25" y="-114.5" />
+      <point x="908.75" y="5289.0" />
+      <point x="861.375" y="5289.0" />
+      <point x="861.375" y="5033.0" />
+      <point x="698.6666666666666" y="5033.0" />
+      <point x="151.66666666666663" y="280.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.BillingAccountController" target="by.training.nc.sd3.entity.BillingAccount">
+      <point x="109.0" y="-126.0" />
+      <point x="5416.346309523809" y="2156.0" />
+      <point x="5388.94630952381" y="2156.0" />
+      <point x="5388.94630952381" y="1132.0" />
+      <point x="3563.1736111111113" y="1132.0" />
+      <point x="161.33333333333348" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.entity.ProductInstance" target="by.training.nc.sd3.entity.BillingAccount">
+      <point x="204.375" y="-247.0" />
+      <point x="2301.677611111112" y="1142.0" />
+      <point x="3321.173611111111" y="1142.0" />
+      <point x="-80.66666666666674" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.UserAccountServiceImpl" target="by.training.nc.sd3.entity.UserAccount">
+      <point x="206.33333333333348" y="-159.0" />
+      <point x="3193.6692777777794" y="2106.0" />
+      <point x="3519.6359920634923" y="2106.0" />
+      <point x="-31.833333333333258" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.BillingAccountDataService" target="by.training.nc.sd3.models.BillingAccountViewModel">
+      <point x="0.0" y="-103.0" />
+      <point x="0.0" y="280.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.StatisticsServiceImpl" target="by.training.nc.sd3.entity.StatisticsEntry">
+      <point x="146.625" y="-60.0" />
+      <point x="1673.602575396826" y="2156.0" />
+      <point x="1677.8958333333333" y="2156.0" />
+      <point x="1677.8958333333333" y="1756.0" />
+      <point x="1477.269325396826" y="1756.0" />
+      <point x="145.125" y="203.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.repository.ProductOfferingRepository" target="by.training.nc.sd3.entity.ProductOffering">
+      <point x="0.0" y="-37.0" />
+      <point x="155.5" y="1132.0" />
+      <point x="872.3749999999998" y="1132.0" />
+      <point x="-184.625" y="335.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductInstanceServiceImpl" target="by.training.nc.sd3.entity.UserAccount">
+      <point x="-159.25" y="-159.0" />
+      <point x="2023.8151111111122" y="2136.0" />
+      <point x="1731.290075396826" y="2136.0" />
+      <point x="1731.290075396826" y="1756.0" />
+      <point x="3392.3026587301592" y="1756.0" />
+      <point x="-159.16666666666674" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.UserAccountDataService" target="by.training.nc.sd3.models.UserAccountViewModel">
+      <point x="0.0" y="-103.0" />
+      <point x="0.0" y="258.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.ProductInstanceService" target="by.training.nc.sd3.entity.ProductInstance">
+      <point x="0.0" y="-114.0" />
+      <point x="4003.5026111111124" y="1736.0" />
+      <point x="2206.302611111112" y="1736.0" />
+      <point x="109.0" y="247.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductOfferingServiceImpl" target="by.training.nc.sd3.entity.ProductOffering">
+      <point x="51.875" y="-115.0" />
+      <point x="306.22757539682607" y="1766.0" />
+      <point x="321.5" y="1766.0" />
+      <point x="321.5" y="1142.0" />
+      <point x="925.1249999999998" y="1142.0" />
+      <point x="-131.875" y="335.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.BillingAccountServiceImpl" target="by.training.nc.sd3.service.ProductInstanceService">
+      <point x="68.57142857142867" y="-137.0" />
+      <point x="3861.4474206349205" y="2106.0" />
+      <point x="3926.9026111111125" y="2106.0" />
+      <point x="-76.59999999999991" y="114.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.UserAccountDataController" target="by.training.nc.sd3.service.UserAccountDataService">
+      <point x="152.75" y="-125.5" />
+      <point x="3323.1300396825395" y="3531.0" />
+      <point x="3408.6414033189035" y="3531.0" />
+      <point x="-171.66666666666652" y="103.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.BillingAccountServiceImpl" target="by.training.nc.sd3.repository.BillingAccountRepository">
+      <point x="-205.71428571428555" y="-137.0" />
+      <point x="3587.1617063492063" y="2086.0" />
+      <point x="3193.469325396826" y="2086.0" />
+      <point x="146.0" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.security.JwtAuthenticationFilter" target="by.training.nc.sd3.security.TokenProvider">
+      <point x="-115.0" y="-48.5" />
+      <point x="4211.38003968254" y="3270.0" />
+      <point x="4182.773979076479" y="3270.0" />
+      <point x="0.0" y="103.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.StatisticsServiceImpl" target="by.training.nc.sd3.service.StatisticsService">
+      <point x="-146.625" y="-60.0" />
+      <point x="1380.352575396826" y="2156.0" />
+      <point x="1227.2291666666663" y="2156.0" />
+      <point x="130.33333333333303" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.BillingAccountDataController" target="by.training.nc.sd3.models.BillingAccountViewModel">
+      <point x="-137.25" y="-114.5" />
+      <point x="137.25" y="5289.0" />
+      <point x="216.625" y="5289.0" />
+      <point x="216.625" y="5033.0" />
+      <point x="395.33333333333337" y="5033.0" />
+      <point x="-151.66666666666663" y="280.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductInstanceServiceImpl" target="by.training.nc.sd3.entity.BillingAccount">
+      <point x="-286.6500000000001" y="-159.0" />
+      <point x="1896.415111111112" y="2156.0" />
+      <point x="1709.290075396826" y="2156.0" />
+      <point x="1709.290075396826" y="1122.0" />
+      <point x="3240.5069444444443" y="1122.0" />
+      <point x="-161.33333333333326" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.StatisticsService" target="by.training.nc.sd3.entity.StatisticsEntry">
+      <point x="0.0" y="-37.0" />
+      <point x="1096.8958333333333" y="1766.0" />
+      <point x="1283.769325396826" y="1766.0" />
+      <point x="-48.375" y="203.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductOfferingDataController" target="by.training.nc.sd3.service.ProductOfferingDataService">
+      <point x="132.0" y="-103.5" />
+      <point x="1282.375" y="3963.0" />
+      <point x="1260.1041666666665" y="3963.0" />
+      <point x="-113.0" y="92.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.ProductOfferingService" target="by.training.nc.sd3.entity.ProductOffering">
+      <point x="0.0" y="-92.0" />
+      <point x="573.895833333333" y="1152.0" />
+      <point x="977.8749999999998" y="1152.0" />
+      <point x="-79.125" y="335.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductsController" target="by.training.nc.sd3.service.ProductOfferingService">
+      <point x="0.0" y="-115.0" />
+      <point x="682.895833333333" y="1766.0" />
+      <point x="712.2291666666661" y="1766.0" />
+      <point x="138.33333333333303" y="92.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.models.StatisticsEntryViewModel" target="by.training.nc.sd3.models.ProductOfferingViewModel">
+      <point x="126.25" y="-203.0" />
+      <point x="2325.958333333333" y="3487.0" />
+      <point x="1637.618134920635" y="3487.0" />
+      <point x="245.57142857142844" y="258.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.BillingAccountDataController" target="by.training.nc.sd3.service.BillingAccountDataService">
+      <point x="137.25" y="-114.5" />
+      <point x="411.75" y="5289.0" />
+      <point x="433.75" y="5289.0" />
+      <point x="-113.25" y="103.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.UserAccountService" target="by.training.nc.sd3.entity.UserAccount">
+      <point x="0.0" y="-114.0" />
+      <point x="4551.9735634920635" y="1706.0" />
+      <point x="3646.9693253968258" y="1706.0" />
+      <point x="95.5" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.models.ProductInstanceViewModel" target="by.training.nc.sd3.models.ProductOfferingViewModel">
+      <point x="138.0" y="-181.0" />
+      <point x="694.564603174603" y="3497.0" />
+      <point x="1228.3324206349207" y="3497.0" />
+      <point x="-163.71428571428578" y="258.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductInstanceDataController" target="by.training.nc.sd3.service.ProductInstanceDataService">
+      <point x="138.75" y="-81.5" />
+      <point x="416.25" y="4215.0" />
+      <point x="436.5" y="4215.0" />
+      <point x="-118.25" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.BillingAccountService" target="by.training.nc.sd3.entity.BillingAccount">
+      <point x="0.0" y="-103.0" />
+      <point x="4943.2235634920635" y="1142.0" />
+      <point x="3522.8402777777774" y="1142.0" />
+      <point x="121.0" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.BillingAccountServiceImpl" target="by.training.nc.sd3.entity.BillingAccount">
+      <point x="0.0" y="-137.0" />
+      <point x="3792.875992063492" y="2106.0" />
+      <point x="3785.457420634921" y="2106.0" />
+      <point x="3785.457420634921" y="1162.0" />
+      <point x="3442.1736111111113" y="1162.0" />
+      <point x="40.333333333333485" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductInstanceController" target="by.training.nc.sd3.entity.BillingAccount">
+      <point x="0.0" y="-126.0" />
+      <point x="4434.608369047619" y="2076.0" />
+      <point x="4279.373563492064" y="2076.0" />
+      <point x="4279.373563492064" y="1152.0" />
+      <point x="3482.5069444444443" y="1152.0" />
+      <point x="80.66666666666652" y="225.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.ProductInstanceDataServiceImpl" target="by.training.nc.sd3.models.ProductInstanceViewModel">
+      <point x="118.25" y="-81.5" />
+      <point x="929.75" y="4215.0" />
+      <point x="875.8749999999999" y="4215.0" />
+      <point x="875.8749999999999" y="3963.0" />
+      <point x="740.564603174603" y="3963.0" />
+      <point x="184.0" y="181.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.models.ProductOfferingViewModel" target="by.training.nc.sd3.models.OfferParamViewModel">
+      <point x="0.0" y="-258.0" />
+      <point x="1392.0467063492065" y="2931.0" />
+      <point x="1371.2967063492063" y="2931.0" />
+      <point x="74.75" y="181.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.security.JwtAuthenticationFilter" target="by.training.nc.sd3.security.SecurityJwtConstants">
+      <point x="114.99999999999994" y="-48.5" />
+      <point x="4441.380039682539" y="3270.0" />
+      <point x="4477.273979076479" y="3270.0" />
+      <point x="4477.273979076479" y="2704.0" />
+      <point x="4376.092160894661" y="2704.0" />
+      <point x="72.0" y="70.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.entity.StatisticsEntry" target="by.training.nc.sd3.entity.ProductOffering">
+      <point x="-96.75" y="-203.0" />
+      <point x="1235.394325396826" y="1162.0" />
+      <point x="1083.3749999999998" y="1162.0" />
+      <point x="26.375" y="335.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.UserAccountDataController" target="by.training.nc.sd3.models.UserAccountViewModel">
+      <point x="-152.75" y="-125.5" />
+      <point x="3017.6300396825395" y="3531.0" />
+      <point x="3050.175494227994" y="3531.0" />
+      <point x="3050.175494227994" y="3270.0" />
+      <point x="3433.30806998557" y="3270.0" />
+      <point x="-147.0" y="258.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.UserAccountController" target="by.training.nc.sd3.service.UserAccountService">
+      <point x="0.0" y="-137.0" />
+      <point x="4934.846309523809" y="2116.0" />
+      <point x="4710.773563492064" y="2116.0" />
+      <point x="158.79999999999995" y="114.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductsController" target="by.training.nc.sd3.entity.ProductOffering">
+      <point x="131.66666666666697" y="-115.0" />
+      <point x="814.5625" y="1766.0" />
+      <point x="881.9359920634929" y="1766.0" />
+      <point x="881.9359920634929" y="1162.0" />
+      <point x="1030.6249999999998" y="1162.0" />
+      <point x="-26.375" y="335.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.ProductInstanceController" target="by.training.nc.sd3.service.BillingAccountService">
+      <point x="190.66666666666674" y="-126.0" />
+      <point x="4625.275035714286" y="2146.0" />
+      <point x="4877.823563492064" y="2146.0" />
+      <point x="-65.39999999999998" y="103.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.UserAccountDataServiceImpl" target="by.training.nc.sd3.service.UserAccountDataService">
+      <point x="-128.75" y="-125.5" />
+      <point x="3624.6300396825395" y="3531.0" />
+      <point x="3580.30806998557" y="3531.0" />
+      <point x="0.0" y="103.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.service.impl.BillingAccountServiceImpl" target="by.training.nc.sd3.service.BillingAccountService">
+      <point x="205.71428571428578" y="-137.0" />
+      <point x="3998.590277777778" y="2136.0" />
+      <point x="4812.423563492064" y="2136.0" />
+      <point x="-130.8" y="103.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.controller.StatisticsEntryDataController" target="by.training.nc.sd3.service.StatisticsEntryDataService">
+      <point x="-177.0" y="-48.5" />
+      <point x="2377.3800396825395" y="4215.0" />
+      <point x="2394.6300396825395" y="4215.0" />
+      <point x="107.25" y="37.0" />
+    </edge>
+    <edge source="by.training.nc.sd3.security.TokenProvider" target="by.training.nc.sd3.security.SecurityJwtConstants">
+      <point x="0.0" y="-103.0" />
+      <point x="4182.773979076479" y="2704.0" />
+      <point x="4232.092160894661" y="2704.0" />
+      <point x="-72.0" y="70.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.1" x="1764.2427211431632" y="1728.6322371265483" />
+  <SelectedNodes>
+    <node>by.training.nc.sd3.entity.ProductOffering</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

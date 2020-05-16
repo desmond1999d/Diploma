@@ -10,7 +10,7 @@ import java.util.Optional;
 @Repository
 public interface BillingAccountRepository extends CrudRepository<BillingAccount, Long> {
 
-    Iterable<BillingAccount> findByOwnerId(@Param("ownerId") Long ownerId);//getByNameAndAndPasswordAndCreditCardNumber
+    Iterable<BillingAccount> findByOwnerId(@Param("ownerId") Long ownerId);
     Optional<BillingAccount> findByNameAndPasswordAndCreditCardNumber(@Param("name") String name,
                                                       @Param("password") String password,
                                                       @Param("creditCardNumber") String creditCardNumber);

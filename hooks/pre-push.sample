@@ -20,7 +20,7 @@
 # with "WIP" (work in progress).
 
 remote="$1"
-url="$2"
+image="$2"
 
 z40=0000000000000000000000000000000000000000
 

@@ -25,7 +25,7 @@ public class StatisticsEntryDataController {
     }
 
     @RequestMapping(value = "/by-category", method = RequestMethod.GET)
-    public ResponseEntity<List<StatisticsEntryViewModel>> getStatisticsByBillingAccountId(@RequestParam("category") int category) {
+    public ResponseEntity<List<StatisticsEntryViewModel>> getStatisticsCategory(@RequestParam("category") int category) {
         return ResponseEntity.ok(this.statisticsEntryDataService.getStatisticsByCategory(Categories.values()[category]));
     }
 

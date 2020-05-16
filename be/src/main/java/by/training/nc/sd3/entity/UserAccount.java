@@ -1,6 +1,7 @@
 package by.training.nc.sd3.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "user_account")
@@ -8,6 +9,7 @@ public class UserAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
     private Long activeBillingAccountId;
     private String name;
     private String password;

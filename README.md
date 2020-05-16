@@ -63,7 +63,7 @@ Set up Tomcat 9
 
 4. Copy updated file to <your path>/apache-tomcat-9.0.0.M18
 5. Open new cmd and execute the scenario: <your path>/apache-tomcat-9.0.0.M18>start-tomcat.bat
-6. Tomcat should be run. To check if evething is ok go to browser and open the url:
+6. Tomcat should be run. To check if evething is ok go to browser and open the image:
     http://localhost:8080/index.jsp
 
 Set up web application module

@@ -1,34 +1,67 @@
-<div class="container">
-  <div class="row">
+<!--<div class="container">-->
+  <!--<div class="row">-->
 
-    <div class="col">
-      <ul class="list-group">
-        <li class="list-group-item"
-            *ngFor="let productOffering of subscriptions | paginate: { itemsPerPage: 4, currentPage: page }">
-          <div class='container-fluid'>
-            <div class="card mx-auto col-md-3 col-10 mt-5"><img class='mx-auto img-thumbnail'
-                                                                src="https://i.imgur.com/pjITBzX.jpg" width="auto"
-                                                                height="auto"/>
-              <div class="card-body text-center mx-auto">
-                <div class='cvp'>
-                  <h5 class="card-title font-weight-bold">{{productOffering.name}}</h5>
-                  <p class="card-text">{{productOffering.price}}</p>
-                  <a routerLink="/details/{{productOffering.id}}"
-                     class="btn details px-auto">view details</a>
-                  <br/> <a routerLink="/details/{{productOffering.id}}" class="btn cart px-auto">ADD
-                  TO CART</a>
-                </div>
+    <!--<div class="col">-->
+      <!--<ul class="list-group">-->
+        <!--<div class="card mx-auto"-->
+             <!--*ngFor="let productOffering of subscriptions | paginate: { itemsPerPage: 4, currentPage: page }">-->
+          <!--<img class='mx-auto img-thumbnail'-->
+               <!--src="https://i.imgur.com/pjITBzX.jpg" width="auto"-->
+               <!--height="auto"/>-->
+          <!--<div class="card-body text-center mx-auto">-->
+            <!--<div class='cvp'>-->
+              <!--<h5 class="card-title font-weight-bold">{{productOffering.name}}</h5>-->
+              <!--<p class="card-text">{{productOffering.price}}</p>-->
+              <!--<a routerLink="/details/{{productOffering.id}}"-->
+                 <!--class="btn details px-auto">view details</a>-->
+              <!--<br/> <a routerLink="/details/{{productOffering.id}}" class="btn cart px-auto">ADD-->
+              <!--TO CART</a>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</ul>-->
+      <!---->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<table class="table table-borderless">
+  <ng-container
+    *ngFor="let productOffering of subscriptions | paginate: { itemsPerPage: 4, currentPage: page } ; let i = index">
+    <tr *ngIf="i % 4 == 0">
+      <ng-container *ngFor="let productOffering of subscriptions; let j = index">
+        <td *ngIf="j >= i && j < i+4">
+          <div class="product-grid">
+            <div class="product-image">
+              <a href="#">
+                <img class="pic-1" [src]="getFirstImageFromOffer(productOffering)">
+                <img class="pic-2" [src]="getSecondImageFromOffer(productOffering)">
+              </a>
+              <span class="product-new-label">Sale</span>
+              <span class="product-discount-label">20%</span>
+            </div>
+            <ul class="rating">
+              <li class="fa fa-star"></li>
+              <li class="fa fa-star"></li>
+              <li class="fa fa-star"></li>
+              <li class="fa fa-star"></li>
+              <li class="fa fa-star disable"></li>
+            </ul>
+            <div class="product-content">
+              <h3 class="title"><a routerLink="/details/{{productOffering.id}}">{{productOffering.name}}</a></h3>
+              <div class="price">$16.00
               </div>
+              <a class="add-to-cart" href="">+ Add To Cart</a>
             </div>
           </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+        </td>
+      </ng-container>
+    </tr>
+  </ng-container>
+</table>
 
-  <div class="nav justify-content-center">
-    <div class="has-text-centered">
-      <pagination-controls (pageChange)="page = $event"></pagination-controls>
-    </div>
+<div class="text-center mt-3">
+  <div class="has-text-centered">
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
   </div>
 </div>

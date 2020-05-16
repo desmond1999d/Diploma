@@ -1,0 +1,271 @@
+@startuml
+
+title __BE's Class Diagram__\n
+
+  namespace by.training.nc.sd3 {
+    class by.training.nc.sd3.BackendApplication {
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace controller {
+      class by.training.nc.sd3.controller.BillingAccountController {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace controller {
+      class by.training.nc.sd3.controller.ProductInstanceController {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace controller {
+      class by.training.nc.sd3.controller.ProductsController {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace controller {
+      class by.training.nc.sd3.controller.StatisticsController {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace controller {
+      class by.training.nc.sd3.controller.UserAccountController {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace entity {
+      class by.training.nc.sd3.entity.BillingAccount {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace entity {
+      enum Categories {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace entity {
+      class by.training.nc.sd3.entity.OfferParam {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace entity {
+      class by.training.nc.sd3.entity.ProductInstance {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace entity {
+      class by.training.nc.sd3.entity.ProductOffering {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace entity {
+      class by.training.nc.sd3.entity.StatisticsEntry {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace entity {
+      class by.training.nc.sd3.entity.UserAccount {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace repository {
+      interface by.training.nc.sd3.repository.BillingAccountRepository {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace repository {
+      interface by.training.nc.sd3.repository.ProductInstanceRepository {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace repository {
+      interface by.training.nc.sd3.repository.ProductOfferingRepository {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace repository {
+      interface by.training.nc.sd3.repository.StatisticsEntryRepository {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace repository {
+      interface by.training.nc.sd3.repository.UserAccountRepository {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace service {
+      interface by.training.nc.sd3.service.BillingAccountService {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace service {
+      interface by.training.nc.sd3.service.ProductInstanceService {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace service {
+      interface by.training.nc.sd3.service.ProductOfferingService {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace service {
+      interface by.training.nc.sd3.service.StatisticsService {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace service {
+      interface by.training.nc.sd3.service.UserAccountService {
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace service {
+      namespace impl {
+        class by.training.nc.sd3.service.impl.BillingAccountServiceImpl {
+        }
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace service {
+      namespace impl {
+        class by.training.nc.sd3.service.impl.ProductInstanceServiceImpl {
+        }
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace service {
+      namespace impl {
+        class by.training.nc.sd3.service.impl.ProductOfferingServiceImpl {
+        }
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace service {
+      namespace impl {
+        class by.training.nc.sd3.service.impl.StatisticsServiceImpl {
+        }
+      }
+    }
+  }
+  
+
+  namespace by.training.nc.sd3 {
+    namespace service {
+      namespace impl {
+        class by.training.nc.sd3.service.impl.UserAccountServiceImpl {
+        }
+      }
+    }
+  }
+  
+
+  by.training.nc.sd3.controller.BillingAccountController o-- by.training.nc.sd3.service.BillingAccountService : billingAccountService
+  by.training.nc.sd3.controller.ProductInstanceController o-- by.training.nc.sd3.service.BillingAccountService : billingAccountService
+  by.training.nc.sd3.controller.ProductInstanceController o-- by.training.nc.sd3.service.ProductInstanceService : productInstanceService
+  by.training.nc.sd3.controller.ProductInstanceController o-- by.training.nc.sd3.service.UserAccountService : userAccountService
+  by.training.nc.sd3.controller.ProductsController o-- by.training.nc.sd3.service.ProductOfferingService : productOfferingService
+  by.training.nc.sd3.controller.StatisticsController o-- by.training.nc.sd3.service.StatisticsService : statisticsService
+  by.training.nc.sd3.controller.UserAccountController o-- by.training.nc.sd3.service.UserAccountService : userAccountService
+  by.training.nc.sd3.entity.ProductInstance o-- by.training.nc.sd3.entity.BillingAccount : billingAccount
+  by.training.nc.sd3.entity.ProductInstance o-- by.training.nc.sd3.entity.ProductOffering : productOffering
+  by.training.nc.sd3.entity.StatisticsEntry o-- by.training.nc.sd3.entity.ProductOffering : serviceId
+  by.training.nc.sd3.service.impl.BillingAccountServiceImpl .up.|> by.training.nc.sd3.service.BillingAccountService
+  by.training.nc.sd3.service.impl.BillingAccountServiceImpl o-- by.training.nc.sd3.service.ProductInstanceService : productInstanceService
+  by.training.nc.sd3.service.impl.BillingAccountServiceImpl o-- by.training.nc.sd3.repository.BillingAccountRepository : repository
+  by.training.nc.sd3.service.impl.ProductInstanceServiceImpl .up.|> by.training.nc.sd3.service.ProductInstanceService
+  by.training.nc.sd3.service.impl.ProductInstanceServiceImpl o-- by.training.nc.sd3.repository.BillingAccountRepository : billingAccountRepository
+  by.training.nc.sd3.service.impl.ProductInstanceServiceImpl o-- by.training.nc.sd3.repository.ProductInstanceRepository : productInstanceRepository
+  by.training.nc.sd3.service.impl.ProductInstanceServiceImpl o-- by.training.nc.sd3.repository.UserAccountRepository : userAccountRepository
+  by.training.nc.sd3.service.impl.ProductOfferingServiceImpl .up.|> by.training.nc.sd3.service.ProductOfferingService
+  by.training.nc.sd3.service.impl.ProductOfferingServiceImpl o-- by.training.nc.sd3.repository.ProductOfferingRepository : productOfferingRepository
+  by.training.nc.sd3.service.impl.StatisticsServiceImpl .up.|> by.training.nc.sd3.service.StatisticsService
+  by.training.nc.sd3.service.impl.StatisticsServiceImpl o-- by.training.nc.sd3.repository.StatisticsEntryRepository : statisticsEntryRepository
+  by.training.nc.sd3.service.impl.UserAccountServiceImpl .up.|> by.training.nc.sd3.service.UserAccountService
+  by.training.nc.sd3.service.impl.UserAccountServiceImpl o-- by.training.nc.sd3.repository.BillingAccountRepository : billingAccountRepository
+  by.training.nc.sd3.service.impl.UserAccountServiceImpl o-- by.training.nc.sd3.repository.ProductInstanceRepository : productInstanceRepository
+  by.training.nc.sd3.service.impl.UserAccountServiceImpl o-- by.training.nc.sd3.repository.UserAccountRepository : userAccountRepository
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

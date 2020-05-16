@@ -17,17 +17,21 @@ public class ProductOffering {
     private boolean isBanned;
     @OneToMany(mappedBy = "productOfferingId", fetch = FetchType.LAZY, cascade = CascadeType.ALL, targetEntity = OfferParam.class)
     private List<OfferParam> params;
+    @Transient
+    private boolean mrc;
 
     public ProductOffering() {
     }
 
-    public ProductOffering(String name, String description, int category, int cost, boolean isBanned, List<OfferParam> params) {
+    public ProductOffering(String name, String description, int category, int cost,
+                           boolean isBanned, List<OfferParam> params, boolean mrc) {
         this.name = name;
         this.description = description;
         this.category = category;
         this.cost = cost;
         this.isBanned = isBanned;
         this.params = params;
+        this.mrc = mrc;
     }
 
     public Long getId() {
@@ -96,6 +100,14 @@ public class ProductOffering {
 
     public void setParams(List<OfferParam> params) {
         this.params = params;
+    }
+
+    public boolean isMrc() {
+        return mrc;
+    }
+
+    public void setMrc(boolean mrc) {
+        this.mrc = mrc;
     }
 
     @Override

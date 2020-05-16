@@ -17,6 +17,7 @@ import {ManageBillingAccountComponent} from './components/manageBillingAccount/m
 import {CreateSubscriptionComponent} from "./components/createSubscription/createSubscription.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CollapseModule } from 'ngx-bootstrap';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { CollapseModule } from 'ngx-bootstrap';
     RouterModule,
     BrowserAnimationsModule,
     CollapseModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CarouselModule.forRoot()
   ],
   exports: [
     ProductsListComponent,

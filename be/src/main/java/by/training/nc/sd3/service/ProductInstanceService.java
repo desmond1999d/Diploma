@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface ProductInstanceService {
 
-    Iterable<ProductInstance> getSubscriptionUnits();
+    Iterable<ProductInstance> getProductInstances();
 
     ProductInstance save(ProductInstance productInstance);
 

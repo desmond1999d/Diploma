@@ -8,12 +8,13 @@ import by.training.nc.sd3.repository.ProductInstanceRepository;
 import by.training.nc.sd3.repository.UserAccountRepository;
 import by.training.nc.sd3.service.ProductInstanceService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.Date;
 import java.util.Optional;
 
-@Component
+@Service
 public class ProductInstanceServiceImpl implements ProductInstanceService {
 
     private ProductInstanceRepository productInstanceRepository;
@@ -29,7 +30,7 @@ public class ProductInstanceServiceImpl implements ProductInstanceService {
         this.billingAccountRepository = billingAccountRepository;
     }
 
-    public Iterable<ProductInstance> getSubscriptionUnits() {
+    public Iterable<ProductInstance> getProductInstances() {
         return this.productInstanceRepository.findAll();
     }
 
@@ -45,6 +46,7 @@ public class ProductInstanceServiceImpl implements ProductInstanceService {
                     BillingAccount billingAccount = billingAccountOptional.get();
                     billingAccount.setMoney(billingAccount.getMoney() - productInstance.getProductOffering().getCost());
                     this.billingAccountRepository.save(billingAccount);
+                    productInstance.setBillingAccount(billingAccount);
                     return this.productInstanceRepository.save(productInstance);
                 }
             }
@@ -55,8 +57,8 @@ public class ProductInstanceServiceImpl implements ProductInstanceService {
     @Override
     public Iterable<ProductInstance> save(Iterable<ProductInstance> productInstances) {
         ProductInstance productInstance = productInstances.iterator().next();
+        int quantity = ((Collection)productInstances).size();
         Optional<UserAccount> userAccountOptional = this.userAccountRepository.findById(productInstances.iterator().next().getUserId());
-        productInstance.setCreationDate(new Date());
         if (userAccountOptional.isPresent()) {
             UserAccount user = userAccountOptional.get();
             if (user.getActiveBillingAccountId() != null) {
@@ -64,8 +66,13 @@ public class ProductInstanceServiceImpl implements ProductInstanceService {
                         this.billingAccountRepository.findById(user.getActiveBillingAccountId());
                 if (billingAccountOptional.isPresent()) {
                     BillingAccount billingAccount = billingAccountOptional.get();
+                    if (billingAccount.getMoney() - productInstance.getProductOffering().getCost() * quantity >= 0)
                     billingAccount.setMoney(billingAccount.getMoney() - productInstance.getProductOffering().getCost());
                     this.billingAccountRepository.save(billingAccount);
+                    productInstances.forEach(productInstance1 -> {
+                        productInstance.setBillingAccount(billingAccount);
+                        productInstance.setCreationDate(new Date());
+                    });
                     return this.productInstanceRepository.saveAll(productInstances);
                 }
             }

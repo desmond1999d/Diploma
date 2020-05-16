@@ -1,10 +1,14 @@
 package by.training.nc.sd3.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class OfferParamViewModel {
     private Long id;
     private String name;
     private String value;
     private Long productOfferingId;
+    private boolean image;
 
     public OfferParamViewModel() {
     }
@@ -45,6 +49,14 @@ public class OfferParamViewModel {
 
     public void setProductOfferingId(Long productOfferingId) {
         this.productOfferingId = productOfferingId;
+    }
+
+    public boolean isImage() {
+        return image;
+    }
+
+    public void setImage(boolean image) {
+        this.image = image;
     }
 
     @Override

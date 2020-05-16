@@ -1,21 +1,25 @@
 package by.training.nc.sd3.controller;
 
-import by.training.nc.sd3.models.BillingAccountViewModel;
 import by.training.nc.sd3.models.UserAccountViewModel;
+import by.training.nc.sd3.security.TokenProvider;
 import by.training.nc.sd3.service.UserAccountDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-
-import java.io.Console;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/ua")
 public class UserAccountDataController {
 
+    private final UserAccountDataService userAccountDataService;
+    private final by.training.nc.sd3.security.TokenProvider tokeProvider;
+
     @Autowired
-    private UserAccountDataService userAccountDataService;
+    public UserAccountDataController(UserAccountDataService userAccountDataService, TokenProvider tokeProvider) {
+        this.userAccountDataService = userAccountDataService;
+        this.tokeProvider = tokeProvider;
+    }
 
     @RequestMapping(value = "/get-by-id", method = RequestMethod.GET)
     public ResponseEntity<UserAccountViewModel> getUserAccountById(@RequestParam Long id) {
@@ -33,8 +37,12 @@ public class UserAccountDataController {
     }
 
     @RequestMapping(value = "/get-by-data", method = RequestMethod.POST)
-    public ResponseEntity<UserAccountViewModel> getUserAccountByData(@RequestParam String login, @RequestBody String password) {
-        return ResponseEntity.ok(userAccountDataService.getUserAccountByData(login, password));
+    public ResponseEntity<String> getUserAccountByData(@RequestParam String login, @RequestBody String password) {
+        UserDetails userDetails = userAccountDataService.getUserAccountByData(login, password);
+        if (userDetails == null) {
+            return ResponseEntity.status(403).build();
+        }
+        return ResponseEntity.ok(tokeProvider.generateToken(userDetails));
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)

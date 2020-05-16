@@ -26,7 +26,7 @@ public class WriteOffService {
         this.billingAccountService = billingAccountService;
     }
 
-    private void pay(ProductInstance productOfferingUnit) {
+    public void pay(ProductInstance productOfferingUnit) {
         Optional<BillingAccount> billingAccountOptional = billingAccountService.getById(productOfferingUnit.getBillingAccount().getId());
         if (billingAccountOptional.isPresent()) {
             BillingAccount billingAccount = billingAccountOptional.get();

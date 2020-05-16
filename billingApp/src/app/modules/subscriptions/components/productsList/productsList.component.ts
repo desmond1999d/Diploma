@@ -25,4 +25,12 @@ export class ProductsListComponent implements OnInit {
         this.subscriptions = subscriptions
     )
   }
+
+  public getFirstImageFromOffer(offer: ProductOffering): string {
+    return (<ProductOffering>offer).params.filter(param => param.image)[0].value;
+  }
+
+  public getSecondImageFromOffer(offer: ProductOffering): string {
+    return (<ProductOffering>offer).params.filter(param => param.image)[1].value;
+  }
 }

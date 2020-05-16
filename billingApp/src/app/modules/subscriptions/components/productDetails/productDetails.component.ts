@@ -16,6 +16,7 @@ import {User} from "../../../../shared/User";
 })
 
 export class ProductDetailsComponent implements OnInit {
+  BrowserAnimationsModule;
   productOffering: ProductOffering;
   isSubscribed: boolean;
   notEnoughMoney: boolean;
@@ -23,6 +24,10 @@ export class ProductDetailsComponent implements OnInit {
   user: User;
   subscriptionId: any;
 
+  config = {
+    animated: true,
+    keyboard: true
+  };
   constructor(private http: SubscriptionService, private route: ActivatedRoute,
               private userIdService: UserIDService,
               private subscriptionUnitService: SubscriptionUnitService,
@@ -112,5 +117,9 @@ export class ProductDetailsComponent implements OnInit {
         }
       );
     }
+  }
+
+  public getImages() {
+    return this.productOffering.params.filter(param => param.image);
   }
 }

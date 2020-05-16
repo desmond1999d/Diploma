@@ -8,11 +8,11 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/products")
-public class SubscriptionController {
+public class ProductsController {
 
     private ProductOfferingService productOfferingService;
 
-    public SubscriptionController(ProductOfferingService productOfferingService) {
+    public ProductsController(ProductOfferingService productOfferingService) {
         this.productOfferingService = productOfferingService;
     }
 

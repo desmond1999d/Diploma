@@ -1,7 +1,10 @@
 package by.training.nc.sd3.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.time.LocalDateTime;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class StatisticsEntryViewModel {
 
     private Long id;

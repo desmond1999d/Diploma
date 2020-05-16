@@ -13,6 +13,7 @@ import {SubscriptionService} from './services/subscription/subscription.service'
 import {UserService} from "./services/user/user.service";
 import {SubscriptionUnitService} from "./services/subscriptionUnit/subscriptionUnit.service";
 import {BillingAccountService} from "./services/billingAccount/billingAccount.service";
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {BillingAccountService} from "./services/billingAccount/billingAccount.se
     AppRoutingModule,
     FormsModule,
     SubscriptionsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule.forRoot()
   ],
   providers: [
     HttpService,

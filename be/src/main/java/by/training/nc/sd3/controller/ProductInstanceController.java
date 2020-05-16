@@ -11,19 +11,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/subscription-units")
-public class SubscriptionUnitController {
+@RequestMapping("api/product-instances")
+public class ProductInstanceController {
 
     private ProductInstanceService productInstanceService;
-    private UserAccountService userAccountService;
-    private BillingAccountService billingAccountService;
 
-    public SubscriptionUnitController(ProductInstanceService productInstanceService,
-                                      UserAccountService userAccountService,
-                                      BillingAccountService billingAccountService) {
+    public ProductInstanceController(ProductInstanceService productInstanceService) {
         this.productInstanceService = productInstanceService;
-        this.userAccountService = userAccountService;
-        this.billingAccountService = billingAccountService;
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
@@ -33,24 +27,11 @@ public class SubscriptionUnitController {
 
     @RequestMapping(value = "/post", method = RequestMethod.POST)
     public ProductInstance save(@RequestBody ProductInstance productInstance) {
-        Optional<UserAccount> userAccountOpt = userAccountService.getUserAccountById(productInstance.getUserId());
-        if (userAccountOpt.isPresent() && userAccountOpt.get().getActiveBillingAccountId() != null) {
-            Optional<BillingAccount> billingAccountOpt = billingAccountService.getById(userAccountOpt.get().getActiveBillingAccountId());
-            if (billingAccountOpt.isPresent()) {
-                productInstance.setBillingAccount(billingAccountOpt.get());
-            }
-        }
         return productInstanceService.save(productInstance);
     }
 
     @RequestMapping(value = "/post-all", method = RequestMethod.POST)
     public Iterable<ProductInstance> saveAll(@RequestBody Iterable<ProductInstance> productInstances) {
-        ProductInstance productInstance = productInstances.iterator().next();
-        Optional<UserAccount> userAccountOpt = userAccountService.getUserAccountById(productInstance.getUserId());
-        if (userAccountOpt.isPresent() && userAccountOpt.get().getActiveBillingAccountId() != null) {
-            Optional<BillingAccount> billingAccountOpt = billingAccountService.getById(userAccountOpt.get().getActiveBillingAccountId());
-            billingAccountOpt.ifPresent(productInstance::setBillingAccount);
-        }
         return productInstanceService.save(productInstances);
     }
 

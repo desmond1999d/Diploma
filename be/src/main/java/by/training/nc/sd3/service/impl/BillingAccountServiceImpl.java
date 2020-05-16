@@ -6,12 +6,11 @@ import by.training.nc.sd3.repository.BillingAccountRepository;
 import by.training.nc.sd3.service.BillingAccountService;
 import by.training.nc.sd3.service.ProductInstanceService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Component
+@Service
 public class BillingAccountServiceImpl implements BillingAccountService {
 
     private BillingAccountRepository repository;

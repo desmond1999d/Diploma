@@ -19,34 +19,34 @@ public class ProductOfferingDataServiceImpl implements ProductOfferingDataServic
 
     public List<ProductOfferingViewModel> getAll() {
         RestTemplate restTemplate = new RestTemplate();
-        ProductOfferingViewModel[] subscriptions = restTemplate.getForObject(backendServerUrl + "/api/subscriptions/", ProductOfferingViewModel[].class);
-        return subscriptions == null ? Collections.emptyList() : Arrays.asList(subscriptions);
+        ProductOfferingViewModel[] products = restTemplate.getForObject(backendServerUrl + "/api/products/", ProductOfferingViewModel[].class);
+        return products == null ? Collections.emptyList() : Arrays.asList(products);
     }
 
-    public ProductOfferingViewModel getSubscriptionById(Long id) {
+    public ProductOfferingViewModel getProductOfferingById(Long id) {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject(backendServerUrl + "/api/subscriptions/" + id + "/", ProductOfferingViewModel.class);
+        return restTemplate.getForObject(backendServerUrl + "/api/products/" + id + "/", ProductOfferingViewModel.class);
     }
 
     @Override
-    public List<ProductOfferingViewModel> getSubscriptionByCategory(String category) {
+    public List<ProductOfferingViewModel> getProductOfferingByCategory(String category) {
         RestTemplate restTemplate = new RestTemplate();
-        ProductOfferingViewModel[] subscriptions = restTemplate.getForObject(backendServerUrl + "/api/subscriptions/by-category?category={category}",
+        ProductOfferingViewModel[] products = restTemplate.getForObject(backendServerUrl + "/api/products/by-category?category={category}",
                 ProductOfferingViewModel[].class, (long) Categories.valueOf(category).ordinal());
-        return subscriptions == null ? Collections.emptyList() : Arrays.asList(subscriptions);
+        return products == null ? Collections.emptyList() : Arrays.asList(products);
     }
 
     @Override
-    public ProductOfferingViewModel getSubscriptionByName(String name) {
+    public ProductOfferingViewModel getProductOfferingByName(String name) {
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject(backendServerUrl + "/api/subscriptions/by-name?name={name}",
+        return restTemplate.getForObject(backendServerUrl + "/api/products/by-name?name={name}",
                 ProductOfferingViewModel.class, name);
     }
 
     @Override
     public ProductOfferingViewModel save(ProductOfferingViewModel productOfferingViewModel) {
         RestTemplate restTemplate = new RestTemplate();
-        ProductOfferingViewModel subscription = restTemplate.postForObject(backendServerUrl + "/api/subscriptions/save",
+        ProductOfferingViewModel subscription = restTemplate.postForObject(backendServerUrl + "/api/products/save",
                 productOfferingViewModel, ProductOfferingViewModel.class);
         return subscription;
     }
@@ -54,7 +54,7 @@ public class ProductOfferingDataServiceImpl implements ProductOfferingDataServic
     @Override
     public ProductOfferingViewModel ban(Long id) {
         RestTemplate restTemplate = new RestTemplate();
-        ProductOfferingViewModel subscription = restTemplate.postForObject(backendServerUrl + "/api/subscriptions/ban",
+        ProductOfferingViewModel subscription = restTemplate.postForObject(backendServerUrl + "/api/products/ban",
                 id, ProductOfferingViewModel.class);
         return subscription;
     }
@@ -62,7 +62,7 @@ public class ProductOfferingDataServiceImpl implements ProductOfferingDataServic
     @Override
     public ProductOfferingViewModel unBan(Long id) {
         RestTemplate restTemplate = new RestTemplate();
-        ProductOfferingViewModel subscription = restTemplate.postForObject(backendServerUrl + "/api/subscriptions/unban",
+        ProductOfferingViewModel subscription = restTemplate.postForObject(backendServerUrl + "/api/products/unban",
                 id, ProductOfferingViewModel.class);
         return subscription;
     }

@@ -8,10 +8,11 @@ import by.training.nc.sd3.repository.UserAccountRepository;
 import by.training.nc.sd3.service.UserAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Component
+@Service
 public class UserAccountServiceImpl implements UserAccountService {
 
     private UserAccountRepository userAccountRepository;
@@ -34,6 +35,11 @@ public class UserAccountServiceImpl implements UserAccountService {
 
     public Optional<UserAccount> getUserAccountById(Long id) {
         return this.userAccountRepository.findById(id);
+    }
+
+    @Override
+    public Optional<UserAccount> getUserAccountByName(String name) {
+        return userAccountRepository.findByName(name);
     }
 
     @Override

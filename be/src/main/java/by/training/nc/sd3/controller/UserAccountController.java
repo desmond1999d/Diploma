@@ -26,6 +26,11 @@ public class UserAccountController {
         return userAccountService.getUserAccountById(id);
     }
 
+    @RequestMapping(value = "/by-name", method = RequestMethod.GET)
+    public Optional<UserAccount> getUserAccountByName(@RequestParam String name) {
+        return userAccountService.getUserAccountByName(name);
+    }
+
     @PostMapping(value = "/get-all")
     public Iterable<UserAccount> getAll() {
         return userAccountService.getAll();

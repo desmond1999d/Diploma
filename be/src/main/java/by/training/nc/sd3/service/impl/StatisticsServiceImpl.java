@@ -6,11 +6,12 @@ import by.training.nc.sd3.repository.StatisticsEntryRepository;
 import by.training.nc.sd3.service.StatisticsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.Date;
 
-@Component
+@Service
 public class StatisticsServiceImpl implements StatisticsService {
 
     private StatisticsEntryRepository statisticsEntryRepository;

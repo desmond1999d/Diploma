@@ -3,6 +3,7 @@ package by.training.nc.sd3.entity;
 import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Entity
@@ -14,25 +15,29 @@ public class ProductInstance {
     private Long userId;
     @ManyToOne
     @JoinColumn(name = "subscriptionId", nullable = false)
+    @NotNull
     private ProductOffering productOffering;
     @ManyToOne
     @JoinColumn(name = "billingAccountId", nullable = false)
+    @NotNull
     private BillingAccount billingAccount;
     private boolean status;
     @Temporal(TemporalType.TIMESTAMP)
     @CreatedDate
     private Date creationDate;
+    @Transient
+    private Date writeOffDate;
 
     public ProductInstance() {
     }
 
-    public ProductInstance(Long userId, ProductOffering productOffering, BillingAccount billingAccount, int daysLeft,
-                           boolean willBeRenewed, boolean status, Date creationDate, Date writeOffDate) {
+    public ProductInstance(Long userId, ProductOffering productOffering, BillingAccount billingAccount, boolean status, Date creationDate, Date writeOffDate) {
         this.userId = userId;
         this.productOffering = productOffering;
         this.billingAccount = billingAccount;
         this.status = status;
         this.creationDate = creationDate;
+        this.writeOffDate = writeOffDate;
     }
 
     public Long getId() {
@@ -81,6 +86,14 @@ public class ProductInstance {
 
     public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
+    }
+
+    public Date getWriteOffDate() {
+        return writeOffDate;
+    }
+
+    public void setWriteOffDate(Date writeOffDate) {
+        this.writeOffDate = writeOffDate;
     }
 
     @Override

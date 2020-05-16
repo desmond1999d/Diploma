@@ -12,6 +12,7 @@ public class OfferParam {
     private String name;
     private String value;
     private Long productOfferingId;
+    private boolean image;
 
     public OfferParam() {
     }
@@ -52,6 +53,14 @@ public class OfferParam {
 
     public void setProductOfferingId(Long productOfferingId) {
         this.productOfferingId = productOfferingId;
+    }
+
+    public boolean isImage() {
+        return image;
+    }
+
+    public void setImage(boolean image) {
+        this.image = image;
     }
 
     @Override
